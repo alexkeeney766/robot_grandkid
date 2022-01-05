@@ -12,7 +12,7 @@ stories:
   - action: utter_help_mac
   - action: utter_did_that_help
   - intent: affirm 
-  - action: goodbye
+  - action: utter_goodbye
 
 - story: happy pc path
   steps:
@@ -24,7 +24,7 @@ stories:
   - action: utter_help_pc
   - action: utter_did_that_help
   - intent: affirm 
-  - action: goodbye
+  - action: utter_goodbye
 
 - story: happy mac path 2
   steps:
@@ -37,7 +37,7 @@ stories:
   - action: utter_help_mac
   - action: utter_did_that_help
   - intent: affirm 
-  - action: goodbye
+  - action: utter_goodbye
 
 - story: happy pc path 2
   steps:
@@ -50,7 +50,7 @@ stories:
   - action: utter_help_pc
   - action: utter_did_that_help
   - intent: affirm 
-  - action: goodbye
+  - action: utter_goodbye
 
 - story: happy mac path
   steps:
@@ -62,7 +62,7 @@ stories:
   - action: utter_help_mac
   - action: utter_did_that_help
   - intent: affirm 
-  - action: goodbye
+  - action: utter_goodbye
 
 - story: happy pc path
   steps:
@@ -74,7 +74,7 @@ stories:
   - action: utter_help_pc
   - action: utter_did_that_help
   - intent: affirm 
-  - action: goodbye
+  - action: utter_goodbye
 
 - story: happy mac path 2
   steps:
@@ -87,7 +87,7 @@ stories:
   - action: utter_help_mac
   - action: utter_did_that_help
   - intent: deny 
-  - action: goodbye
+  - action: utter_goodbye
 
 - story: happy pc path 2
   steps:
@@ -100,7 +100,7 @@ stories:
   - action: utter_help_pc
   - action: utter_did_that_help
   - intent: deny 
-  - action: goodbye
+  - action: utter_goodbye
 
 - story: bot challange path
   steps:
