@@ -1,0 +1,57 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - request_help
+  - clarify_system
+  - bot_challenge
+
+entities:
+- system
+
+slots:
+  system:
+    type: categorical
+    influence_conversation: True
+    values:
+      - PC
+      - Mac
+    mappings:
+    - type: from_entity
+      entity: system
+
+responses:
+  utter_greet:
+  - text: "Hello, how can I help?"
+  - text: "Ready to assist! Give me your worst!"
+
+  utter_help_mac:
+  - text: "Here is Apple's documentation for your Mac: https://help.apple.com/macOS/high-sierra/mac-basics/#/intro"
+
+  utter_help_pc:
+  - text: "Here is Microsoft's documentation for your PC: https://www.microsoft.com/en-us/windows/getting-started?r=1"
+
+  utter_ask_system:
+  -text: "What kind of computer do you use, Mac or PC?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_goodbye:
+  - text: "Goodbye, Please tell Alex Keeney how I did."
+
+  utter_great:
+  - text: "Great!"
+
+  utter_sorry:
+  - text: "So sorry, I'm still training. Please tell me what went wrong."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa, developed by Alex Keeney. He is to blame for any bad behaivor."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

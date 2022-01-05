@@ -1,0 +1,108 @@
+version: "3.0"
+
+stories:
+
+- story: happy mac path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - slot_was_set: 
+    - system: "Mac"
+  - action: utter_help_mac
+  - action: utter_did_that_help
+  - intent: affirm 
+  - action: goodbye
+
+- story: happy pc path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - slot_was_set: 
+    - system: "PC"
+  - action: utter_help_pc
+  - action: utter_did_that_help
+  - intent: affirm 
+  - action: goodbye
+
+- story: happy mac path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - action: utter_ask_system
+  - slot_was_set:
+    - system: 'Mac'
+  - action: utter_help_mac
+  - action: utter_did_that_help
+  - intent: affirm 
+  - action: goodbye
+
+- story: happy pc path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - action: utter_ask_system
+  - slot_was_set:
+    - system: 'PC'
+  - action: utter_help_pc
+  - action: utter_did_that_help
+  - intent: affirm 
+  - action: goodbye
+
+- story: happy mac path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - slot_was_set: 
+    - system: "Mac"
+  - action: utter_help_mac
+  - action: utter_did_that_help
+  - intent: affirm 
+  - action: goodbye
+
+- story: happy pc path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - slot_was_set: 
+    - system: "PC"
+  - action: utter_help_pc
+  - action: utter_did_that_help
+  - intent: affirm 
+  - action: goodbye
+
+- story: happy mac path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - action: utter_ask_system
+  - slot_was_set:
+    - system: 'Mac'
+  - action: utter_help_mac
+  - action: utter_did_that_help
+  - intent: deny 
+  - action: goodbye
+
+- story: happy pc path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - action: utter_ask_system
+  - slot_was_set:
+    - system: 'PC'
+  - action: utter_help_pc
+  - action: utter_did_that_help
+  - intent: deny 
+  - action: goodbye
+
+- story: bot challange path
+  steps:
+  - intent: greet 
+  - action: utter_greet 
