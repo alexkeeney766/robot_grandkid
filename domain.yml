@@ -35,7 +35,7 @@ responses:
   - text: "Here is Microsoft's documentation for your PC: https://www.microsoft.com/en-us/windows/getting-started?r=1"
 
   utter_ask_system:
-  -text: "What kind of computer do you use, Mac or PC?"
+  - text: "What kind of computer do you use, Mac or PC?"
 
   utter_did_that_help:
   - text: "Did that help you?"
