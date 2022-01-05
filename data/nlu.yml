@@ -73,7 +73,15 @@ nlu:
     - Mac
     - apple 
     - mac
-    - 
+    - i have a Mac 
+    - i have a PC 
+    - im using a mac
+    - im using a pc 
+    - i'm using a mac 
+    - i'm using a pc 
+    - i'm using an apple computer 
+    - i have an apple computer 
+
 
 - intent: bot_challenge
   examples: |
@@ -82,3 +90,9 @@ nlu:
     - What is your name
     - am I talking to a bot?
     - am I talking to a human?
+
+  # Synnonms
+- synonym: Mac
+  examples: |
+    - mac
+    - apple 
