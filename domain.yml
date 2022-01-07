@@ -8,6 +8,7 @@ intents:
   - request_help
   - clarify_system
   - bot_challenge
+  - out_of_scope
 
 entities:
 - system
@@ -49,6 +50,9 @@ responses:
   utter_sorry:
   - text: "So sorry, I'm still training. Please tell me what went wrong."
 
+  utter_define_scope:
+  - text: "So sorry, I can only help with OS related questions at this time. What System are you using, PC or Mac?"
+  
   utter_iamabot:
   - text: "I am a bot, powered by Rasa, developed by Alex Keeney. He is to blame for any bad behaivor."
 
