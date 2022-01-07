@@ -70,18 +70,18 @@ nlu:
 
 - intent: clarify_system
   examples: |
-    - Mac
-    - apple 
-    - mac
-    - i have a Mac 
-    - i have a PC 
-    - im using a mac
-    - im using a pc 
-    - i'm using a mac 
-    - i'm using a pc 
-    - i'm using an apple computer 
-    - i have an apple computer 
-
+    - [Mac]{"entity": "system", "value": "Mac"}
+    - [apple]{"entity": "system", "value": "Mac"} 
+    - [mac]{"entity": "system", "value": "Mac"}
+    - i have a [Mac]{"entity": "system", "value": "Mac"} 
+    - i have a [PC]{"entity": "system", "value": "PC"} 
+    - im using a [mac]{"entity": "system", "value": "Mac"}
+    - im using a [pc]{"entity": "system", "value": "PC"} 
+    - i'm using a [mac]{"entity": "system", "value": "Mac"} 
+    - i'm using a [pc]{"entity": "system", "value": "PC"} 
+    - i'm using an [apple]{"entity": "system", "value": "Mac"} computer 
+    - i have an [apple]{"entity": "system", "value": "Mac"} computer 
+    
 
 - intent: bot_challenge
   examples: |
