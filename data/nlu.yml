@@ -51,19 +51,19 @@ nlu:
 
 - intent: request_help
   examples: |
-    - How do I use my Mac
-    - How do I use my mac
-    - How do I use my PC
-    - How do I use my pc
+    - How do I use my [Mac]{"entity": "system", "value": "Mac"}
+    - How do I use my [mac]{"entity": "system", "value": "Mac"}
+    - How do I use my [PC]{"entity": "system", "value": "PC"} 
+    - How do I use my [pc]{"entity": "system", "value": "PC"} 
     - How do I use my Windows computer
     - How do I use my windows computer
-    - How do I use my Apple computer
-    - How do I use my apple computer
+    - How do I use my [Apple]{"entity": "system", "value": "Mac"} computer
+    - How do I use my [apple]{"entity": "system", "value": "Mac"} computer
     - I need help 
-    - I need help with my PC
-    - I need help with my Mac
+    - I need help with my [PC]{"entity": "system", "value": "PC"}
+    - I need help with my [Mac]{"entity": "system", "value": "Mac"}
     - How do I change windows on my PC 
-    - How do I change windows on my Mac
+    - How do I change windows on my [Mac]{"entity": "system", "value": "Mac"}
     - How do I change windows 
     - How do I change my desktop wallpaper
     - How do I change tabs
