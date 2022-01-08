@@ -91,6 +91,21 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: out_of_scope
+  examples: |
+    - Where is my dog
+    - My dog's name is Mac 
+    - How do I make my printer work
+    - Does my computer have a virus
+    - Does my printer have a virus
+    - Where can I buy a toaster
+    - My phone is slow 
+    - Does this dress loook good on me 
+    - What is my shoe size 
+    - how much wood could a cood chuck chuck if a wood chuck could chuck wood 
+    - the quick brown fox jumped over the lazy dogs 
+
+
   # Synnonms
 - synonym: Mac
   examples: |
