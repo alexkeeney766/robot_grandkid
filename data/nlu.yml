@@ -1,5 +1,4 @@
 version: "3.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hello
 - intent: goodbye
   examples: |
     - cu
@@ -29,7 +28,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -38,7 +36,7 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - Yes it did. thank you!
 - intent: deny
   examples: |
     - no
@@ -48,41 +46,42 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: request_help
   examples: |
-    - How do I use my [Mac]{"entity": "system", "value": "Mac"}
+    - How do I use my [Mac](system)
     - How do I use my [mac]{"entity": "system", "value": "Mac"}
-    - How do I use my [PC]{"entity": "system", "value": "PC"} 
-    - How do I use my [pc]{"entity": "system", "value": "PC"} 
+    - How do I use my [PC](system)
+    - How do I use my [pc]{"entity": "system", "value": "PC"}
     - How do I use my Windows computer
     - How do I use my windows computer
     - How do I use my [Apple]{"entity": "system", "value": "Mac"} computer
     - How do I use my [apple]{"entity": "system", "value": "Mac"} computer
-    - I need help 
-    - I need help with my [PC]{"entity": "system", "value": "PC"}
-    - I need help with my [Mac]{"entity": "system", "value": "Mac"}
-    - How do I change windows on my PC 
-    - How do I change windows on my [Mac]{"entity": "system", "value": "Mac"}
-    - How do I change windows 
+    - I need help
+    - I need help with my [PC](system)
+    - I need help with my [Mac](system)
+    - How do I change windows on my PC
+    - How do I change windows on my [Mac](system)
+    - How do I change windows
     - How do I change my desktop wallpaper
     - How do I change tabs
-
+    - I'm having trouble with my computer
+    - Can you help me with my [mac]{"entity": "system", "value": "Mac"}?
+    - I'm having trouble with my [PC](system)
+    - Ok, I need help with my computer
 - intent: clarify_system
   examples: |
-    - [Mac]{"entity": "system", "value": "Mac"}
-    - [apple]{"entity": "system", "value": "Mac"} 
+    - [Mac](system)
+    - [apple]{"entity": "system", "value": "Mac"}
     - [mac]{"entity": "system", "value": "Mac"}
-    - i have a [Mac]{"entity": "system", "value": "Mac"} 
-    - i have a [PC]{"entity": "system", "value": "PC"} 
+    - i have a [Mac](system)
+    - i have a [PC](system)
     - im using a [mac]{"entity": "system", "value": "Mac"}
-    - im using a [pc]{"entity": "system", "value": "PC"} 
-    - i'm using a [mac]{"entity": "system", "value": "Mac"} 
-    - i'm using a [pc]{"entity": "system", "value": "PC"} 
-    - i'm using an [apple]{"entity": "system", "value": "Mac"} computer 
-    - i have an [apple]{"entity": "system", "value": "Mac"} computer 
-    
-
+    - im using a [pc]{"entity": "system", "value": "PC"}
+    - i'm using a [mac]{"entity": "system", "value": "Mac"}
+    - i'm using a [pc]{"entity": "system", "value": "PC"}
+    - i'm using an [apple]{"entity": "system", "value": "Mac"} computer
+    - i have an [apple]{"entity": "system", "value": "Mac"} computer
+    - [Mac](system)
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -90,24 +89,31 @@ nlu:
     - What is your name
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: out_of_scope
   examples: |
     - Where is my dog
-    - My dog's name is Mac 
+    - My dog's name is Mac
     - How do I make my printer work
     - Does my computer have a virus
     - Does my printer have a virus
     - Where can I buy a toaster
-    - My phone is slow 
-    - Does this dress loook good on me 
-    - What is my shoe size 
-    - how much wood could a cood chuck chuck if a wood chuck could chuck wood 
-    - the quick brown fox jumped over the lazy dogs 
-
-
-  # Synnonms
+    - My phone is slow
+    - Does this dress loook good on me
+    - What is my shoe size
+    - how much wood could a cood chuck chuck if a wood chuck could chuck wood
+    - the quick brown fox jumped over the lazy dogs
+- intent: affirm+goodbye
+  examples: |
+    - Yes, goodbye
+    - yes, goodbye
+- intent: greet+bot_challenge
+  examples: |
+    - Hello, are you real?
 - synonym: Mac
   examples: |
     - mac
-    - apple 
+    - Apple
+    - apple
+- synonym: PC
+  examples: |
+    - pc

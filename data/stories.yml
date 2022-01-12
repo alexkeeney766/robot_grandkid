@@ -1,128 +1,185 @@
 version: "3.0"
 
 stories:
+  - story: happy mac path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+        entities:
+          - system: "Mac"
+      - slot_was_set:
+          - system: "Mac"
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
 
-- story: happy mac path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_help
-    entities:
-    - system: "Mac"
-  - slot_was_set: 
-    - system: "Mac"
-  - action: utter_help_mac
-  - action: utter_did_that_help
-  - intent: affirm 
-  - action: utter_goodbye
+  - story: happy pc path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+        entities:
+          - system: "Mac"
+      - slot_was_set:
+          - system: "PC"
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
 
-- story: happy pc path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_help
-    entities:
-    - system: "Mac"
-  - slot_was_set: 
-    - system: "PC"
-  - action: utter_help_pc
-  - action: utter_did_that_help
-  - intent: affirm 
-  - action: utter_goodbye
+  - story: happy mac path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_ask_system
+      - intent: clarify_system
+        entities:
+          - system: "Mac"
+      - slot_was_set:
+          - system: "Mac"
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
 
-- story: happy mac path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_help
-  - action: utter_ask_system
-  - intent: clarify_system
-    entities:
-    - system: 'Mac'
-  - slot_was_set:
-    - system: 'Mac'
-  - action: utter_help_mac
-  - action: utter_did_that_help
-  - intent: affirm 
-  - action: utter_goodbye
+  - story: happy pc path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_ask_system
+      - intent: clarify_system
+        entities:
+          - system: "PC"
+      - slot_was_set:
+          - system: "PC"
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
 
-- story: happy pc path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_help
-  - action: utter_ask_system
-  - intent: clarify_system
-    entities:
-    - system: 'PC'
-  - slot_was_set:
-    - system: 'PC'
-  - action: utter_help_pc
-  - action: utter_did_that_help
-  - intent: affirm 
-  - action: utter_goodbye
+  - story: happy mac path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+        entities:
+          - system: "Mac"
+      - slot_was_set:
+          - system: "Mac"
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
 
-- story: happy mac path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_help
-    entities:
-    - system: "Mac"
-  - slot_was_set: 
-    - system: "Mac"
-  - action: utter_help_mac
-  - action: utter_did_that_help
-  - intent: affirm 
-  - action: utter_goodbye
+  - story: happy pc path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+        entities:
+          - system: "PC"
+      - slot_was_set:
+          - system: "PC"
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
 
-- story: happy pc path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_help
-    entities:
-    - system: "PC"
-  - slot_was_set: 
-    - system: "PC"
-  - action: utter_help_pc
-  - action: utter_did_that_help
-  - intent: affirm 
-  - action: utter_goodbye
+  - story: happy mac path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_ask_system
+      - intent: clarify_system
+        entities:
+          - system: "Mac"
+      - slot_was_set:
+          - system: "Mac"
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
 
-- story: happy mac path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_help
-  - action: utter_ask_system
-  - intent: clarify_system
-    entities:
-    - system: 'Mac'
-  - slot_was_set:
-    - system: 'Mac'
-  - action: utter_help_mac
-  - action: utter_did_that_help
-  - intent: deny 
-  - action: utter_goodbye
+  - story: happy pc path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_ask_system
+      - intent: clarify_system
+        entities:
+          - system: "PC"
+      - slot_was_set:
+          - system: "PC"
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
 
-- story: happy pc path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: request_help
-  - action: utter_ask_system
-  - intent: clarify_system
-    entities:
-    - system: 'PC'
-  - slot_was_set:
-    - system: 'PC'
-  - action: utter_help_pc
-  - action: utter_did_that_help
-  - intent: deny 
-  - action: utter_goodbye
+  - story: bot challange path
+    steps:
+      - intent: greet
+      - action: utter_greet
 
-- story: bot challange path
-  steps:
-  - intent: greet 
-  - action: utter_greet 
+  - story: interactive_story_1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_ask_system
+      - intent: clarify_system
+        entities:
+          - system: Mac
+      - slot_was_set:
+          - system: Mac
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: interactive_story_2
+    steps:
+      - intent: request_help
+        entities:
+          - system: Mac
+      - slot_was_set:
+          - system: Mac
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm+goodbye
+      - action: utter_goodbye
+
+  - story: interactive_story_3
+    steps:
+      - intent: request_help
+        entities:
+          - system: PC
+      - slot_was_set:
+          - system: PC
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm+goodbye
+      - action: utter_goodbye
+
+  - story: interactive_story_4
+    steps:
+      - intent: greet+bot_challenge
+      - action: utter_iamabot
+      - intent: request_help
+      - action: utter_ask_system
+      - intent: clarify_system
+        entities:
+          - system: Mac
+      - slot_was_set:
+          - system: Mac
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
+      - intent: goodbye
+      - action: utter_goodbye
