@@ -183,3 +183,24 @@ stories:
       - action: utter_goodbye
       - intent: goodbye
       - action: utter_goodbye
+
+  - story: interactive_story_1
+    steps:
+      - intent: request_help
+      - action: utter_ask_system
+      - intent: clarify_system
+        entities:
+          - system: PC
+      - slot_was_set:
+          - system: PC
+      - action: action_docs_selector
+      - action: utter_did_that_help
+      - intent: bot_challenge
+      - action: utter_iamabot
+      - intent: affirm
+      - action: utter_goodbye
+      - intent: goodbye
+      - action: action_deactivate_loop
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null

@@ -2,3 +2,6 @@
 models/*
 actions/__pycache__/*
 story_graph.dot
+secrets.txt
+rei.sh
+

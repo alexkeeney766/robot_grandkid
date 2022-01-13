@@ -1,52 +1,52 @@
-version: '3.0'
+version: "3.0"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- affirm
-- goodbye
-- clarify_system
-- request_help
-- greet+bot_challenge
-- affirm+goodbye
-- greet
-- deny
-- bot_challenge
-- out_of_scope
+  - bot_challenge
+  - clarify_system
+  - request_help
+  - affirm
+  - goodbye
+  - greet+bot_challenge
+  - affirm+goodbye
+  - greet
+  - deny
+  - out_of_scope
 entities:
-- system
+  - system
 slots:
   system:
     type: categorical
     influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: system
+      - type: from_entity
+        entity: system
     values:
-    - pc
-    - mac
+      - pc
+      - mac
 responses:
   utter_greet:
-  - text: Hello, how can I help?
-  - text: Ready to assist! Give me your worst!
+    - text: Hello, how can I help?
+    - text: Ready to assist! Give me your worst!
   utter_ask_system:
-  - text: What kind of computer do you use, Mac or PC?
+    - text: What kind of computer do you use, Mac or PC?
   utter_did_that_help:
-  - text: Did that help you?
+    - text: Did that help you?
   utter_goodbye:
-  - text: Goodbye, Please tell Alex Keeney how I did.
+    - text: Goodbye, Please tell Alex Keeney how I did.
   utter_great:
-  - text: Great!
+    - text: Great!
   utter_sorry:
-  - text: So sorry, I'm still training. Please tell me what went wrong.
+    - text: So sorry, I'm still training. Please tell me what went wrong.
   utter_define_scope:
-  - text: So sorry, I can only help with OS related questions at this time. What System are you using, PC or Mac?
+    - text: So sorry, I can only help with OS related questions at this time. What System are you using, PC or Mac?
   utter_iamabot:
-  - text: I am a bot, powered by Rasa, developed by Alex Keeney. He is to blame for any bad behaivor.
+    - text: I am a bot, powered by Rasa, developed by Alex Keeney. He is to blame for any bad behaivor.
 actions:
-- action_docs_selector
-- utter_ask_system
-- utter_did_that_help
-- utter_goodbye
-- utter_greet
-- utter_iamabot
+  - action_docs_selector
+  - utter_ask_system
+  - utter_did_that_help
+  - utter_goodbye
+  - utter_greet
+  - utter_iamabot
