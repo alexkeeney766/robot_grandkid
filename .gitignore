@@ -1,7 +1,29 @@
-.rasa/
-models/*
-actions/__pycache__/*
-story_graph.dot
-secrets.txt
-rei.sh
+# Engine Ignores
+engine/.rasa/
+engine/models/*
+**/__pycache__
+engine/story_graph.dot
+engine/secrets.txt
+engine/rei.sh
+
+**/venv
+
+# Interface Ignores
+react-interface/node_modules
+react-interface/.pnp
+react-interface.pnp.js
+
+react-interface/coverage
+react-interface/build
+
+react-interface/# misc
+react-interface/.DS_Store
+react-interface/.env.local
+react-interface/.env.development.local
+react-interface/.env.test.local
+react-interface/.env.production.local
+
+react-interface/npm-debug.log*
+react-interface/yarn-debug.log*
+react-interface/yarn-error.log*
 
