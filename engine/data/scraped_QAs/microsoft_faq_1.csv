@@ -1,0 +1,607 @@
+,question,answer
+0,What is Windows 10?,"Windows 10 is the name for Microsoft's next generation client operating system.
+ 
+"
+1,What happened to Windows 9?,"There was never a Windows 9, Microsoft skipped this number and went to 10 instead. Company officials decided to choose 10 because they believe this release is a 'Perfect 10' and to also signify this is the last major release of Windows. There will
+ still be revisions of Windows 10 called Feature Updates, just don't expect there to be a Windows 11, Windows 12 etc. Initially revealed at BUILD 2014 as a minor update called ‘Threshold’, Windows 10 was originally intended be a minor Update 2 for Windows 8.1.
+ Somewhere along the way, plans changed and the operating system evolved into the major revision we have today. 
+ When will Windows 10 officially become available?  Microsoft launched Windows 10 world wide on July 29th 2015 at 12 AM EST. This is what Microsoft Program Manager for Windows, Terry Myerson had to say: 
+ We continue to make great development progress and shared today that Windows 10 will be available this summer in 190 countries and 111 languages.
+ 
+ Source: 
+http://blogs.windows.com/bloggingwindows/2015/03/17/windows-10-launching-this-summer-in-190-countries-and-111-languages/#comment-21091
+ 
+ Source: 
+http://blogs.windows.com/bloggingwindows/2015/06/01/hello-world-windows-10-available-on-july-29/
+ 
+"
+2,What is the build number of the public release?,"Build 10240 Build 10586 Build 14393 Build 15063 current 
+"
+3,How do I know which build of Windows 10 I have installed?,"Resource: 
+How to Verify
+ If You Downloaded or Installed the Latest Version Windows 10  
+ Is build 10240 of Windows 10 made available July 29th 2015 recommended for everyday use?
+ The Windows 10 (which was made available to the general public on July 29th 2015) is a complete copy of the software that is designated as ready and fit for use in production environments. To reach this milestone, a particular build has to go through
+ a series of thorough regression test and optimizations to reach a level of quality satisfactory for production. Unlike pre-release builds of Windows 10 the Windows 10 available today does not expire. 
+ Please note, 10240 has been succeeded by newer Feature Updates. 
+ 
+"
+4,What does RTM mean?,"RTM means Release to Manufacturing; which is a milestone in software development. Not specifically relevant to Windows 10, but symbolically in the past, it determined when a build is ready for production environments where it can be deployed
+ and be used for everyday computing and preloaded on new computers. 
+"
+5,Does Windows 10 require a Touch Screen?,"No, Windows 10 works just fine with mouse and keyboard. If you have a standard LCD or CRT monitor, it works just fine with that too. 
+"
+6,Is the Start Screen still available in Windows 10?,"See: 
+How to: enable the Start screen in Windows 10  
+"
+7,Have the touch features been removed from Windows 10?,"No, they are there for devices that support it.  
+"
+8,Will I need to be connected to the Internet in order to use Windows 10?,"Windows 10 does not require an active Internet connection for everyday use. It works just fine offline and you can do everything you would normally do in Windows 7 or earlier.
+ 
+ 
+ I have multiple computers, do I have to download Windows 10 on each computer?
+ You can download a .ISO file and upgrade each computer offline.  
+ How
+ to: upgrade from previous versions of Windows using Windows 10 ISO file
+ 
+ Please note,you can use the Media Creation Tool to create bootable media that can upgrade different versions, editions and architectures of Windows. This will require a USB thumb drive with at least 16 GBs of space.
+ 
+ What
+ are the editions of Windows 10 available?  
+ Click HERE to download official ISO media for Windows 10 from Microsoft.
+ 
+ I downloaded the .ISO file but I am being prompted to enter a product key when I start setup. Please note: The copy of Windows 10 you download must correspond with the edition of Windows you are upgrading from: 
+ 
+ Does Windows 10 support Windows Server 2003 Domains?  Yes 
+"
+9,I am currently dual booting Windows and Linux; will the upgrade to Windows 10 affect my Linux installation?,"No 
+ Learn more: 
+How to: Upgrade a dual boot installation of Windows and Linux to Windows 10 - Part 1 
+ 
+"
+10,"I am on a slow connection, what options do I have?",
+11,"See: How
+ to: Upgrade to Windows 10 if you are on a slow or metered Internet connection?","
+ I don't have a reliable Internet connection, suppose my computer is disconnected from the Internet during the download?
+You will have to start the download again if you are downloading from Windows Update or you will need to redownload the ISO file. 
+ 
+ 
+"
+12,How do I troubleshoot Windows 10 installation messages?,"How to: Troubleshoot common Setup and Stop Errors during Windows 10 Installation 
+"
+13,Will I have the option of choosing a different drive or partition where I want the upgrade installed?,"With the full version of Windows 10, yes, you can perform a custom install by choosing which partition or drive you would like to install it on it on.
+ 
+ Learn more: How to: Perform a custom installation
+ of Windows 
+"
+14,"I am dual booting with another edition of Windows, will upgrading affect the other installation?","No, it will not affect the other operating system, only the version of Windows from which the upgrade is initiated will be replaced. 
+"
+15,Will upgrading to Windows 10 affect other drives or partitions or files in those partitions in my computer?,"No, only the drive where the upgrade is initiated from will be affected. You can always disconnect non-system drives as a precaution.
+ 
+ I want to dual boot instead of replace my current version of Windows. If you need to install Windows 10 on a separate hard disk or partition, you will need to purchase a full license. 
+ Retail pricing information: Please note the Windows 10 Pro Pack can only be used to upgrade Windows 10 Home. https://www.microsoft.com/en-US/windows/windows-10-faq
+ 
+ I want to try Windows 10 out before upgrading or buying it:"
+16,I want to switch from my currently installed architecture when migrating to Windows 10. Do I have that option with the free upgrade offer?,"
+ How
+ to: Switch from 32 bit versions of Windows to Windows 10 64 bit  
+"
+17,Which edition of Windows 10 will be installed?,"When you upgrade, you’ll stay on like-to-like editions of Windows. For example, Windows 7 Home Premium will upgrade to Windows 10 Home. 
+ Windows 72 Windows 83 
+ “N” and “KN” editions follow the upgrade path of the parent edition (e.g., Windows 7 Professional N upgrades to Windows 10 Pro N). 
+ 
+ Resources: What
+ are the editions of Windows 10 available?  
+ http://www.microsoft.com/en-us/windows/windows-10-faq
+ 
+ 
+"
+18,Will my Antivirus be compatible with Windows 10?,"Most likely not. Windows 10 will require that you have a version of your Antivirus or other security software that is designed for Windows 10. It is recommended that you uninstall your current Antivirus before intiating the upgrade. If you have a subscription
+ that has not expired, contact the developer to find out about Windows 10 support. Most Antivirus utilities should be upgraded by the time Windows 10 launches. If your subscription is still active, then you should be entitled to a compatible update for Windows
+ 10. 
+ How
+ to enable and use the built in Windows Defender for Antivirus Protection in Windows 10 
+"
+19,Can I choose a different language during the upgrade?,"Cross language upgrades are not supported, the free upgrade will be installed in your local language.
+ 
+ In fact, you should uninstall any language packs before upgrading. For example, if the default language your copy of Windows 7 Ultimate was installed in is French and you added a English Language Pack; you will need to install a language pack for English
+ after setup is complete if you are upgraded to Windows 10 Pro. If you have Windows 10 Home installed you will need to install the Windows 10 Pro Pack ($99) using Easy
+ Upgrade then download the English Language Pack. 
+ Learn more: How to Install and Change Languages in Windows 10 - groovyPost 
+"
+20,Which languages will Windows 10 be available in?,"
+ Arabic (Saudi Arabia), Bulgarian (Bulgaria), Chinese (Simplified, China), Chinese (Hong Kong), Chinese (Traditional, Taiwan), Croatian (Croatia), Czech (Czech Republic), Danish (Denmark), Dutch (Netherlands), English (United Kingdom), English (United States),
+ Estonian (Estonia), Finnish (Finland), French (France), French (Canada), German (Germany), Greek (Greece), Hebrew (Israel), Hungarian (Hungary), Italian (Italy), Japanese (Japan), Korean (Korea), Latvian (Latvia), Lithuanian (Lithuania), Norwegian, Bokmål
+ (Norway), Polish (Poland), Portuguese (Brazil), Portuguese (Portugal), Romanian (Romania), Russian (Russia), Serbian (Latin, Serbia), Slovak (Slovakia), Slovenian (Slovenia), Spanish (Spain, International Sort), Spanish (Mexico), Swedish (Sweden), Thai (Thailand),
+ Turkish (Turkey), Ukrainian (Ukraine)  
+ Additional languages available as Language Interface Packs http://www.microsoft.com/en-US/windows/windows-10-specifications
+ 
+"
+21,I heard that Windows 10 will work on my phone?,"Not just any phone. Windows 10 will be available to existing smartphones running Windows Phone 8.1.
+ 
+"
+22,Is there a list of supported phones?,"http://blogs.windows.com/bloggingwindows/2015/03/27/a-quick-update-on-windows-10-builds-for-phones-for-windows-insiders/
+ 
+"
+23,So there is not going to be a separate Windows 10?,"No, just Windows 10, whether its a Tablet, PC, Phone.  
+"
+24,How will I get the update on my phone?,"Do Windows Phone devices qualify for this free upgrade?  Yes. We are working with Windows Phone 8.1 partners to make the Windows 10 upgrade available to most phones later this year.**** http://www.microsoft.com/en-us/windows/windows-10-faq
+ 
+"
+25,Does Windows 10 require product activation?,"Yes, you will need to activate Windows 10.  
+ Learn more: 
+How to activate the latest Windows 10 build 
+"
+26,What are some of the new improvements in Windows 10?,
+27,Which features will be removed when I upgrade from a previous version of Windows?,"Feature deprecation section  Source:  http://www.microsoft.com/en-US/windows/windows-10-specifications
+ 
+"
+28,Is Media Center supported in Windows 10?,"No. Persons who need to use Media Center should consider carefully before upgrading from their previous version of Windows. The Windows 10 upgrade will automatically remove any installations of Media Center. 
+"
+29,So what are the alternatives if I need Media Center?,Your best option is to continue running your existing version of Windows with Media Center.
+30,Will Windows Media Center be available in Windows 10?,"Windows Media Center is not part of Windows 10 and won’t be available after upgrading to Windows 10. If you use Windows Media Center, we will alert you during upgrade that Windows Media Center is not available on Windows 10. We know that some users use Windows
+ Media Center to play DVDs, and we are providing a free DVD playback app in Windows 10 for Windows Media Center users. 
+ Source: 
+http://www.microsoft.com/en-us/windows/windows-10-faq  
+"
+31,Are there any alternatives to Windows Media Center?,"If you need the PVR (personal video recorder) features in Windows Media Center, then
+Media Portal is one alternative. If you just want a simple video player, I like
+MPC-HC (Media Player Classic
+– Home Cinema), but 
+VLC will do the job. All three are open source and free.
+ 
+ Source:  http://www.theguardian.com/technology/askjack/2015/jun/25/microsoft-windows-10-free-upgrade-7-questions-answered 
+ 
+"
+32,"Is Windows Live Mail versions 2009, 2011, 2012 compatible with Windows 10?","Yes, they are. 
+ Please note, Microsoft will be removing support for Windows Essentials in January of 2017.
+ Learn more: 
+https://support.microsoft.com/en-gb/help/13785/windows-essentials-2012-release-notes
+ 
+"
+33,I use Windows Virtual PC with Windows XP Mode. What will happen to them if I upgrade to Windows 10?,"Please note your existing Windows Virtual PC and Windows XP Mode will not work in Windows 10. 
+ You can review the following as a possible work around if you need to. http://lifehacker.com/5965889/how-to-run-windows-xp-for-free-in-windows-8
+ 
+ Windows 10 Pro and Windows 10 Enterprise/Education includes a built in Hypervisor called Hyper-V which you can use to setup virtual machines. 
+ Learn more:  How to setup a virtual
+ machine using Hyper-V  
+ Please note, Hyper-V does not include a Windows license, you will need to provide and install your own. 
+"
+34,Is Windows Media Player still available in Windows 10?,"Yes: 
+How to locate and open Windows Media Player in Windows 10
+ 
+"
+35,What happens to my previous operating system when I upgrade to Windows 10?,"Windows 10 replaces your previous version of Windows by moving it to the Windows.old folder. Windows 10 becomes the default operating system. 
+"
+36,Can I uninstall Windows 10 if I do not like it or something goes wrong?,"Yes, you can see the following: 
+How to: Rollback to a previous version of Windows from Windows 10
+ 
+ Please note: starting with the Windows 10 Anniversary Update, you have only 10 days to rollback. 
+ What happens to the recovery partition used by my previous version of Windows?
+In some cases, it might become inoperable. That is why it is strongly advised you backup before upgrading. 
+ Suppose I need to go back to Windows 8 or Windows 7?
+You will either need to have recovery media or request recovery media from the manufacturer of your computer or try rolling back within the first 10 days of upgrading. 
+"
+37,"Will upgrading from Windows 7 or later preserve my personal files, applications and settings?","Yes, upgrading from Windows 7 or a later version will preserve your personal files (documents, music, pictures, videos, downloads, favorites, emails, contacts etc, applications (ie. Microsoft Office, Adobe applications etc),  games and settings (ie. passwords,
+ custom dictionary, application settings).  
+"
+38,"Will my existing programs, hardware and drivers work on Windows 10?","Most applications and hardware drivers designed for Windows 7 or later should work with Windows 10. Of course, with significant changes in Windows 10, it is best you contact the software developer and hardware vendor to find out about support for Windows
+ 10. Windows 10 setup will keep, upgrade, replace and might require that you install new drivers through Windows Update or from the manufacturers website. 
+ 
+ Installing drivers through Windows Update Windows Update is the premier starting point to resolve most common driver issues you might experience immediately after installing Windows 10. 
+ Simply launch it from Start > Settings > 
+Update and Security and click Check for Updates 
+ Click Check for updates (make sure you have an active Internet connection).  
+  Immediately, Windows Update will detect your system configuration and download all the appropriate drivers for your system. As you can see in the above screenshot, my Intel HD 3000 Graphics was installed automatically. I did not even have to reboot the system.
+ In addition to that other hardware components were also detected and installed which includes my LAN adapter and card reader. 
+ Learn more: How
+ to: Install and Update drivers in Windows 10  
+"
+39,How will I know if my computer can run Windows 10?,"System requirements If you want to upgrade to Windows 10 on your PC or tablet, here’s what it takes. Latest OS:  Make sure you are running the latest version either Windows 7 SP1 or Windows 8.1 Update. 
+ For Windows 8.1, see the following article: http://windows.microsoft.com/en-us/windows-8/install-latest-update-windows-8-1
+ 
+ For Windows 7, see the following article: http://windows.microsoft.com/en-US/windows7/learn-how-to-install-windows-7-service-pack-1-sp1
+ 
+ Processor:  1 gigahertz (GHz) or faster processor or SoC RAM:  1 gigabyte (GB) for 32-bit or 2 GB for 64-bit
+Hard disk space:  16 GB for 32-bit OS 20 GB for 64-bit OS
+Graphics card:  DirectX 9 or later with WDDM 1.0 driver
+Display:  1024x600 
+"
+40,How much actual free disk space is required by Windows 10 setup?,"Windows 10 uses approximately 10 GBs of disk space. The minimum disk space available is to facilitate the installation process. Some install files are compressed and need to be expanded during setup. Some files are temporary and are deleted during or after
+ installation. Also, because you might have data and apps on the hard disk, they will be moved around during migration. 
+ Learn more:  http://www.microsoft.com/en-US/windows/windows-10-specifications
+ 
+ 
+ Which editions of Windows 10 Support Multiple processors?  Windows 10 Home only supports one physical CPU.  
+"
+41,My Tablet does not have 16 or 20 GBs of free space and I am not able to free up any additional space. What should I do?,"Windows 10 will support systems with compressed installations. Windows 10 can upgrade such systems with as little as 8.5 GBs of free space. 
+ Also see: How
+ to Install Windows 10 on Devices with Limited Space  
+ 
+ Will Windows 10 require UEFI and Secure Boot?  No, Windows 10 works just fine on legacy BIOS systems. New devices that that come preinstalled with Windows 10 later this summer must have UEFI by default and Secure Boot enabled at the factory. 
+"
+42,Does this mean I won't be able to dual boot with alternative operating systems and older versions of Windows?,"Not necessarily, even though Secure Boot is enabled by default, you can still disable it in order to accommodate older versions of Windows or alternative operating systems. 
+"
+43,"I notice there was no mention of ARM or Windows RT devices, will there be Windows 10 support?","If you’re running Windows RT, your device won’t upgrade to Windows 10, but  an update will be provided around the time of Windows 10 release. 
+ http://www.microsoft.com/en-us/windows/windows-10-faq
+ 
+"
+44,Will I be able to purchase Windows 10 on DVD?,"Windows 10 will certainly be available as a digital download of course. You can always create your own backup copy too either on a USB thumbdrive or blank DVD. Microsoft has provided an updated Media Creation Tool for Window 10 which streamlines downloading
+ setup files for Windows 8.1 32 and 64 bit in different localizations. The media creation allows you save a .ISO file or create a bootable copy on a USB thumbdrive. 
+"
+45,"I heard Microsoft representatives mention they are moving to a servicing model for Windows 10, does that mean Windows 10 is going to require a subscription?","No, Windows 10 remains a perpetual license, which means, you can upgrade to Windows 10 and use it forever without it expiring or going into any reduced functional mode.
+ 
+"
+46,Are you saying there will be no more versions of Windows after Windows 10?,"Microsoft is moving Windows to a servicing model with Windows 10. The days of major revisions or what are called big bang releases are no more. As Microsoft Program Manager for Windows Terry Myerson described it: 
+ This is more than a one-time upgrade: once a Windows device is upgraded to Windows 10, we will continue to keep it current for the supported lifetime of the device
+– at no additional charge. With Windows 10, the experience will evolve and get even better over time. We’ll deliver new features when they’re ready, not waiting for the next major release. We think of Windows as a Service
+– in fact, one could reasonably think of Windows in the next couple of years as one of the largest Internet services on the planet. 
+ And just like any Internet service, the idea of asking ""What version are you on?"" will cease to make sense
+– which is great news for our Windows developers. 
+ 
+ Source: http://blogs.windows.com/bloggingwindows/2015/01/21/the-next-generation-of-windows-windows-10/
+ 
+ 
+ Will I have to pay for updates and fixes for Windows 10?
+No, updates, fixes, security updates, features all remain free.  
+"
+47,What does lifetime of the device mean?,"The logical conclusion is as long as the machine is operable, Microsoft will continue to support it with updates. So, if the machine still works 5 or 10 years from now, revisions and updates to Windows 10 will be made available to it. Please note that Windows
+ 10 uses the same life cycle policy of 5 years mainstream support and 5 years extended support. 
+"
+48,What are the official upgrade paths to Windows 10?,"Microsoft revealed in a Channel 9 Video the official upgrade paths to Windows 10: 
+  
+ Windows XP, Windows Vista and LINUX users will have to purchase a full retail license and perform a clean install from a .ISO, Windows 8.0 users can use the .ISO file to perform an in place upgrade.
+ 
+ Source: 
+http://channel9.msdn.com/Events/WinHEC/2015/OWD100
+ 
+ 
+"
+49,"When I upgrade a preinstalled (OEM) or retail version of Windows 7 or Windows 8/8.1 license to Windows 10, does that license remain OEM or become a retail license?","If you upgrade from a OEM or retail version of Windows 7 or Windows 8/8.1 to the free Windows 10 upgrade this summer, the license is consumed into it. Because the free upgrade is derived from the base qualifying license, Windows 10 will carry that licensing
+ too. 
+ If you upgrade from a retail version, it carries the rights of a retail version. If you upgrade from a OEM version, it carries the rights of a OEM version. 
+ Full version (Retail): - Includes transfer rights to another computer. - Doesn't require a previous qualifying version of Windows. - Expensive 
+ Upgrade version (Retail): 
+ - Includes transfer rights to another computer. - require a previous qualifying version of Windows. - Expensive, but cheaper than full version 
+ OEM : OEM versions of Windows are identical to Full License Retail versions except for the following: - OEM versions do not offer any free Microsoft direct support from Microsoft support personnel - OEM licenses are tied to the very first computer you install and activate it on - OEM versions allow all hardware upgrades except for an upgrade to a different model motherboard - OEM versions cannot be used to directly upgrade from an older Windows operating system 
+"
+50,What happens if I change my motherboard?,"As it pertains to the OEM license this will invalidate the Windows 10 upgrade license because it will no longer have a previous base qualifying license which is required for the free upgrade. You will then have to purchase a full retail
+ Windows 10 license. If the base qualifying license (Windows 7 or Windows 8.1) was a full retail version, then yes, you can transfer it.
+ 
+ From the Windows 10 end user license agreement: b. Stand-alone software. If you acquired the software as stand-alone software (and also if you upgraded from software you acquired as stand-alone software), you may transfer the software to another device that belongs to you. You may also
+ transfer the software to a device owned by someone else if (i) you are the first licensed user of the software and (ii) the new user agrees to the terms of this agreement. You may use the backup copy we allow you to make or the media that the software came
+ on to transfer the software. Every time you transfer the software to a new device, you must remove the software from the prior device. You may not transfer the software to share licenses between devices. 
+"
+51,I am on a slow connection or I don't have access to the Internet. Is there an option to request backup media?,"Microsoft says: ""We’ll have options available for users who can’t download through Windows Update."" These options have yet to be announced.
+ 
+ Source: 
+http://www.theguardian.com/technology/askjack/2015/jun/25/microsoft-windows-10-free-upgrade-7-questions-answered 
+"
+52,Will users who take advantage of the upgrade offer for Windows 10 from Windows 8.1 and Windows 7 also be able to obtain recovery media?,"Microsoft recently noted the following options available:  With Windows 10, you can create your own recovery media and back up the pristine state of the operating system and preinstalled software. If things go wrong and you are unable to refresh or reset your device successfully, you
+ can boot the device using recovery media and reset to the prior pristine state. Source: 
+http://blogs.windows.com/bloggingwindows/2015/03/16/how-windows-10-achieves-its-compact-footprint/
+ 
+ Learn more: 
+ What happens if I reinstall Windows using the recovery partition? 
+ Windows 10 will be reinstalled. 
+"
+53,"Will I get a product key, can I get a product key?","By default, Windows 10 builds are pre-keyed, meaning, you do not have to enter a product key and should not be prompted to enter one even after Windows 10 has completed setup. 
+ http://answers.microsoft.com/en-us/insider/wiki/insider_wintp-insider_install/how-to-activate-the-latest-windows-10-build/33f31475-93b3-4d1c-812f-4b21fbd807a7 
+ 
+ When you upgraded from a previous version of Windows or receive a new computer preinstalled with Windows 10, what happened is the hardware (your PC) will get a digital entitlement, where a unique signature of the computer will be stored on Microsoft Activation
+ Servers. The Windows 7 or Windows 8 genuine license you were previously running will be exchanged for a diagnostics key.
+ 
+ Anytime you need to reinstall Windows 10 on that machine, just proceed to reinstall Windows 10. It will automatically reactivate.
+ So, there is no need to know or get a product key, if you need to reinstall Windows 10, you can use your Windows 7 or Windows 8 product key or use the reset function in Windows 10. 
+ If you are prompted to enter a product key, click 'I don't have a key' and 'Do this later' 
+ Will ISO media be provided for the final release?  Yes, you will be able to download ISO media for Windows 10 RTM.  Please note, you might have to download the appropriate edition of Windows 10 for the version/edition of Windows you are upgrading. If you upgrade to the wrong edition, ie. Windows 7 Home Premium to Windows 10 Pro, you will have to purchase a license
+ for Windows 10 Pro or go back to Windows 7 Home Premium and upgrade to Windows 10 Home.
+"
+54,"What
+ are the editions of Windows 10 available?","
+ Resources: How
+ to: upgrade from previous versions of Windows using Windows 10 ISO file 
+ Click HERE to download official ISO media for Windows 10 from Microsoft.
+ 
+"
+55,Suppose I need to reinstall Windows 10 a year or two from now or I install a new hard disk?,"Windows 10 is registered to the device, not your hard disk. Just install a new hard disk and reinstall Windows 10 and it will reactivate automatically. 
+"
+56,Does the ISO file support dual boot with another version of Windows?,"You can download an ISO, but the installation must be performed from within a qualifying, genuine, activated version of Windows, either Windows 8.1, Windows 8.0, Windows 7 or Windows 10 Insider Preview. If you don't, it won't activate. Why? It has to do
+ a compliance check against a qualifying operating system.  
+"
+57,How many editions of Windows 10 are there?,"Introducing Windows 10 Editions  As in the past, we will offer different Windows editions that are tailored for various device families and uses. These different editions address specific needs of our various customers, from consumers to small businesses to the largest enterprises. Learn more: http://blogs.windows.com/bloggingwindows/2015/05/13/introducing-windows-10-editions/ 
+"
+58,How much RAM does each edition of Windows 10 support?,Windows 10 Official Memory Limits is 2 TBs - groovyPost For a complete breakdown:
+59,"What
+ are the editions of Windows 10 available?","
+ Resource: 
+How to know the Edition, Architecture, Channel and build of Windows 10 installed.  
+ My system is eligible to upgrade to Windows 10 Home, but I want Pro instead.
+ You will need to purchase a Pro Pack license and perform an Easy Upgrade: How
+ to Perform an Easy Upgrade in Windows 10  
+"
+60,Can Easy Upgrade be used to upgrade to Windows 10 Enterprise?,"Yes, if have a genuine Windows 10 Enterprise product key, you can use it it with Easy Upgrade. 
+ How
+ to Perform an Easy Upgrade in Windows 10 
+"
+61,How much will Windows 10 cost if I need to perform a new installation on a PC without a qualifying license or on a blank partition?,"Retail pricing information: Please note the Windows 10 Pro Pack can only be used to upgrade a genuine, activated Windows 10 Home installation. 
+ Source: 
+https://www.microsoft.com/en-US/windows/windows-10-faq  
+"
+62,Is it true I cannot prevent automatic updates in Windows 10 Home and Pro?,"Yes, updates can deferred in Windows 10 Pro, but not indefinitely.  
+  
+ 
+"
+63,Is there an option or work around to block updates or hardware drivers that might cause problems?,"Yes, Microsoft has released a KB update (KB3073930) that will let users block or hide Windows or driver updates.
+ 
+  You can download it at the following link:
+https://support.microsoft.com/en-us/kb/3073930   
+"
+64,What does Windows as a Service entail?,"Since the introduction of Windows Update as part of Windows, Microsoft has delivered updates as way to keep Windows updated and secure. This has always been the way the company keeps commercial versions of Windows on the market current.
+ 
+ With Windows 10, Microsoft is making significant changes to this model by delivering new methods of servicing Windows. Taking into account we now live in a mobile, constantly connected world, where threats happen all the time. Part of the solution to this
+ is to keep users current by providing the latest updates as soon as they are available in addition to delivering features as soon as they ready too.
+ 
+ Microsoft will do this using three types of service branches for Windows 10: 
+
+
+
+
+Service Branch
+
+
+Options
+
+
+Edition
+
+
+
+
+Current Branch
+
+
+
+Security Updates, Features and Fixes are automatically applied.There is no option to delay or customize these updates.
+
+
+
+Windows 10 Home
+
+
+
+
+Current Branch for Business (CBB)
+
+
+
+CBB includes the requirements of the Current Branch, but also provides the option of customizing when and which Security Updates, Features and Fixes are applied, similar to how Windows Update works today in current versions of Windows. Updates cannot be deferred indefinitely.Windows Updates can be managed using enterprise management tools such as Windows Update for Business and/ WSUS.
+
+
+
+Windows 10 ProWindows 10 Enterprise Windows 10 Education
+
+
+
+
+Long Term Servicing Branch (LTSB)
+
+
+
+Only available to volume license customers running Windows 10 Enterprise.Flexible options for managing Windows Updates.Windows Updates can be customized to only accept Security Fixes.Windows Updates can be managed using enterprise management tools such as Windows Update for Business and/ WSUS.
+
+
+
+Windows 10 Enterprise 
+
+
+
+
+ Service Branch Options Edition Current Branch Current Branch for Business (CBB) Long Term Servicing Branch (LTSB) 
+"
+65,Can I schedule when Windows Updates are installed and will these required updates force restart my computer?,"You can schedule when Updates are installed and no, updates do not force restart your computer. 
+  Open the Notification icon from the Notification Area and click Don't forget: a restart is scheduled... 
+"
+66,"Regarding the new servicing model for Windows 10, will Enterprise customers be required to adopt the rapid release cadence too?","No, Enterprise customers will continue to service and manage their Windows 10 clients the same way they do today. Here is what Terry Myerson had to say: 
+ We understand that businesses require choice in how updates are delivered, and at what pace. So as I discussed on September 30th, with Windows 10, businesses will be able to pick the speed of innovation that is right for each
+ group of their users, rather than rely on a one size fits all solution. 
+ Business customers will be able to opt-in to the fast-moving consumer update pace, or lock-down mission critical environments to receive only security and critical updates to their systems. And businesses will have an additional
+ option for systems that aren’t mission critical, but need to keep pace with the latest innovations while having the benefit to install updates after they have been tested in the broad market. And the choice isn’t one or the other for businesses; we expect
+ that most corporations will require a mix of these options to accommodate their business scenarios. Take for example an investment bank, where mission critical systems on the trading floor receive only security updates, whereas mobile devices for financial
+ advisors are kept up to date with the latest feature innovations – enabling the appropriate pace of updates for each device. 
+ Source: 
+http://blogs.windows.com/business/2015/01/21/windows-10-an-exciting-new-chapter/ 
+"
+67,Will the new Microsoft Edge web browser replace Internet Explorer in Windows 10?,"No, Windows 10 will continue to include an updated version of Internet Explorer 11 for compatibility with legacy web sites. Microsoft Edge is based on a new engine, so some older web sites will switch to the older Internet Explorer 11 engine for compatibility
+ purposes. Get
+ Started with Microsoft Edge - Tips and Tricks for the new user.  
+"
+68,"I did a clean install of Windows 10 but cannot find Internet Explorer, what happened?","See: 
+How to locate and open Internet Explorer in Windows 10 
+"
+69,How does Windows 10 handle privacy?,"Windows 10 includes a new Privacy setting so you can control how much information you share with Microsoft and apps installed on your computer. To adjust privacy settings, open Settings > Privacy. 
+ http://aka.ms/privacy
+ 
+ Will non-genuine Windows licenses qualify for the Windows 10 upgrade?
+ The simple answer is no. This is what Terry Mason had to say: 
+ Microsoft and our OEM partners know that many consumers are unwitting victims of piracy, and with Windows 10, we would like all of our customers to move forward with us together. While our free offer to upgrade to Windows 10 will not apply to Non-Genuine
+ Windows devices, and as we’ve always done, we will continue to offer Windows 10 to customers running devices in a Non-Genuine state. In addition, in partnership with some of our valued OEM partners, we are planning very attractive Windows 10 upgrade offers
+ for their customers running one of their older devices in a Non-Genuine state. Please stay tuned to learn more from our partners on the specifics of their offers. 
+ Source: 
+http://blogs.windows.com/bloggingwindows/2015/05/15/genuine-windows-and-windows-10/ 
+"
+70,Where can I get more information about Windows 10?,"*******************************************************************************************************************  
+ 
+Was this article helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this article? Thanks for your feedback, it helps us improve the site. How satisfied are you with this article? Thanks for your feedback. * Please try a lower page number. * Please enter only numbers. * Please try a lower page number. * Please enter only numbers. Andre,   
+ A very informative summary.  Thanks. 
+ Does Windows 10 support syncing across USB cable / WiFi hotspot or only through OneDrive?  [So that Outlook Calendar & Contacts can be sent to a tablet without having to use my internet data allowance?] 
+                    2 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. 
+                    5 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. Andre, 
+ Thanks for that additional [disappointing] info.  
+ If Windows 10 had introduced local [USB, hotspot] syncing I could consider Windows tablets & phones in the future. I quite like the idea of having the same OS on everything.  
+ Without local syncing in Windows 10, I'll stick to Android tablets & phones with
+MyPhoneExplorer for local syncing of MS Outlook Calendar-Contacts-Notes & general files.  
+                    4 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. Many thanks for the article! Vainly tried to find an answer on Internet on the following question: 
+ way back, early 2013, for a limited period of time one could purchase an upgrade from Windows 7->Windows 8. at the same time, one could additionally order the Windows 8 DVD (at € 15, or so) 
+ I assume this will also be the case once Windows 10 will be released. 
+ The upgrade is free (for Windows 7/8 users), but presumably the DVD go at actual costs, same as with Windows 8. 
+"
+71,Q: will the  DVD-upgrade-version in fact be a 'full' package?,"(either OEM or Retail) 
+ Meaning to say that once upgrade of version 10 is being installed on a -clean- HDD formatted pc,
+ the setup will require both the Windows 10 key, then notice it is an upgrade, and subsequently ask
+ for either the Windows 7 or Windows 8 key (OEM or retail). 
+ This way it is not necessary to first install 7 or 8 and then install v10 over it. 
+ I know Adobe follows this method: each upgrade basically is a full package, the key determines if
+ it is an upgrade and the key of a previous version should additionally be entered. 
+ Note:  I am using full retail versions only, i.e. sofar I have never installed a Windows upgrade,
+ so I wouldn't know this is already common practice with Microsoft products. 
+ - 
+                    2 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. 
+                    4 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. 
+                    2 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. Many thanks for the article! Vainly tried to find an answer on Internet on the following question: 
+ way back, early 2013, for a limited period of time one could purchase an upgrade from Windows 7->Windows 8. at the same time, one could additionally order the Windows 8 DVD (at € 15, or so) 
+ I assume this will also be the case once Windows 10 will be released. No, it will be free for everyone to upgrade to within the first year, so if you purchase a laptop even 3 months before Windows 10 is launched, you are going to get it anyway.
+ 
+ The upgrade is free (for Windows 7/8 users), but presumably the DVD go at actual costs, same as with Windows 8. Well, Microsoft has a create refresh/reset media for Windows 8.1, so I assume the same for Windows 10. 
+"
+72,Q: will the  DVD-upgrade-version in fact be a 'full' package?,"(either OEM or Retail) Most likely, with the release of Windows 8.1, Microsoft made retail packaged versions full licenses.
+ 
+ Meaning to say that once upgrade of version 10 is being installed on a -clean- HDD formatted pc,
+ the setup will require both the Windows 10 key, then notice it is an upgrade, and subsequently ask
+ for either the Windows 7 or Windows 8 key (OEM or retail). We don't know all the details, you will have a year to find out and make a decision when Windows 10 is launched.
+ 
+ This way it is not necessary to first install 7 or 8 and then install v10 over it. 
+ I know Adobe follows this method: each upgrade basically is a full package, the key determines if
+ it is an upgrade and the key of a previous version should additionally be entered. 
+ Note:  I am using full retail versions only, i.e. sofar I have never installed a Windows upgrade,
+ so I wouldn't know this is already common practice with Microsoft products. 
+ -  
+                    2 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. As my preview download just started ten minutes ago, I read here that a NEW VERSION of the Windows 10 Evaluation is  released, to the elite first though.
+ Build 10041, the 'Impressive Build' updates the January preview Build 9926, the 'Awesome Build' ??
+
+I'll be looking in Updates for it, the changes look good. 
+Via askvg.com:
+New features and improvements in new build 10041:
+
+    Improvements to Start Menu
+    Start Menu is now transparent
+    Improvements to Virtual Desktops
+    Cortana now works on computers in China, UK, France, Italy, Germany and Spain along with U.S.
+    New network fly-out from Taskbar
+    Rotating background images on Lock Screen
+
+ 
+  
+                    4 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. Thanks for the information in the article.  One thing that was not answered is the question of which most concerns me.  Will the Windows 10 upgrade fix the multiple problems I have encountered with Windows 8.1?   These problems include but is not limited
+ to the following:   1)  Constant freezing and shut down of Excel while working with the product.  Message - ""Microsoft Excel has stopped working""  2) Attachments not appearing in my e-mail.   3) After upgrading from windows 8 to 8.1 several programs stopped
+ working correctly such as scanning from my printer. 
+ If the answer to any of these problems is no I don't think I will be continuing with windows products.  After the frustrations I have encountered with windows 8.1, I was on the verge of ditching the whole system to try out Apple products until a friend mentioned
+ that they are about to release Windows 10.  So, one more chance to get it right Microsoft people.  I am looking forward to an upgrade away from 8.1
+forever!! 
+                    2 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. If it printed in Windows 7 it should work in Windows 10.
+Just wait, a driver ought to be released - by the company or in a Windows 10 update version.
+
+No specific driver released for Windows 7 or 8 even released for my old HP printer.
+In Windows 10 I can use it to print, installing nothing, using a driver for the HP series detected by Windows 10.   However it fails to provide all the options - SOLVED rather easily:
+I  installed my favorite ArcSoft image processing program (for XP) into Windows 10 and printed using that no problem at all.  Note that program wouldn't install in Windows 7.
+ 
+ However an even older printer  - no luck in Windows 7-8-10,  only XP actually prints.
+ 
+                    7 people found this comment helpful
+                 
+Was this comment helpful?
+
+Yes
+No
+
+ 
+                        Sorry this didn't help.
+                     Great! Thanks for your feedback. How satisfied are you with this comment? Thanks for your feedback, it helps us improve the site. How satisfied are you with this comment? Thanks for your feedback. * Please try a lower page number. * Please enter only numbers. * Please try a lower page number."
