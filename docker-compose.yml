@@ -1,0 +1,30 @@
+version: '3.0'
+services:
+  rasa:
+    image: robot_grandkid-agent
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command: 
+      - run
+
+  rasa-actions:
+    image: robot_grandkid-actions
+    ports:
+      - 5055:5055
+    volumes:
+      - ./:/app
+    command:
+      - run
+
+  app:
+    image: robot_grandkid-interface
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+    command: 
+      - run
+
+  

@@ -1,0 +1,28 @@
+FROM rasa/rasa-sdk:3.0.2
+
+WORKDIR /app
+
+USER root 
+
+RUN apt-get update -qq && \
+  apt-get install -y --no-install-recommends \
+  python3 \
+  python3-pip \
+  # required for health check
+  curl \
+  && apt-get autoremove -y
+  
+# Make sure that all security updates are installed
+RUN apt-get update && apt-get dist-upgrade -y --no-install-recommends
+
+# Install extra requirements for actions code
+# RUN pip install -r requirements.txt
+
+# Copy actions code to working directory
+COPY ./actions /app/actions
+
+# Don't use root user to run code
+USER 1001
+
+# Start the action server
+CMD ["start", "run", "actions"]
