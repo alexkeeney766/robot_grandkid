@@ -27,3 +27,8 @@ react-interface/npm-debug.log*
 react-interface/yarn-debug.log*
 react-interface/yarn-error.log*
 
+engine/events.db
+engine/events.db-shm
+.gitignore
+engine/rasa.db
+engine/events.db-wal

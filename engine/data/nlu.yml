@@ -1,122 +1,123 @@
 version: "2.0"
 nlu:
-  - intent: greet
-    examples: |
-      - hey
-      - hello
-      - hi
-      - hello there
-      - good morning
-      - good evening
-      - moin
-      - hey there
-      - let's go
-      - hey dude
-      - goodmorning
-      - goodevening
-      - good afternoon
-      - Hello
-  - intent: goodbye
-    examples: |
-      - cu
-      - good by
-      - cee you later
-      - good night
-      - bye
-      - goodbye
-      - have a nice day
-      - see you around
-      - bye bye
-      - see you later
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-      - Yes it did. thank you!
-      - OK, thats weird
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
-  - intent: request_help
-    examples: |
-      - How do I use my [Mac](system)
-      - How do I use my [mac]{"entity": "system", "value": "Mac"}
-      - How do I use my [PC](system)
-      - How do I use my [pc]{"entity": "system", "value": "PC"}
-      - How do I use my Windows computer
-      - How do I use my windows computer
-      - How do I use my [Apple]{"entity": "system", "value": "Mac"} computer
-      - How do I use my [apple]{"entity": "system", "value": "Mac"} computer
-      - I need help
-      - I need help with my [PC](system)
-      - I need help with my [Mac](system)
-      - How do I change windows on my PC
-      - How do I change windows on my [Mac](system)
-      - How do I change windows
-      - How do I change my desktop wallpaper
-      - How do I change tabs
-      - I'm having trouble with my computer
-      - Can you help me with my [mac]{"entity": "system", "value": "Mac"}?
-      - I'm having trouble with my [PC](system)
-      - Ok, I need help with my computer
-      - My computer isn't working
-  - intent: clarify_system
-    examples: |
-      - [Mac](system)
-      - [apple]{"entity": "system", "value": "Mac"}
-      - [mac]{"entity": "system", "value": "Mac"}
-      - i have a [Mac](system)
-      - i have a [PC](system)
-      - im using a [mac]{"entity": "system", "value": "Mac"}
-      - im using a [pc]{"entity": "system", "value": "PC"}
-      - i'm using a [mac]{"entity": "system", "value": "Mac"}
-      - i'm using a [pc]{"entity": "system", "value": "PC"}
-      - i'm using an [apple]{"entity": "system", "value": "Mac"} computer
-      - i have an [apple]{"entity": "system", "value": "Mac"} computer
-      - [PC](system)
-  - intent: bot_challenge
-    examples: |
-      - are you a bot?
-      - are you a human?
-      - What is your name
-      - am I talking to a bot?
-      - am I talking to a human?
-      - wait, are you an AI?
-  - intent: out_of_scope
-    examples: |
-      - Where is my dog
-      - My dog's name is Mac
-      - How do I make my printer work
-      - Does my computer have a virus
-      - Does my printer have a virus
-      - Where can I buy a toaster
-      - My phone is slow
-      - Does this dress loook good on me
-      - What is my shoe size
-      - how much wood could a cood chuck chuck if a wood chuck could chuck wood
-      - the quick brown fox jumped over the lazy dogs
-  - intent: affirm+goodbye
-    examples: |
-      - Yes, goodbye
-      - yes, goodbye
-  - intent: greet+bot_challenge
-    examples: |
-      - Hello, are you real?
-  - synonym: Mac
-    examples: |
-      - mac
-      - Apple
-      - apple
-  - synonym: PC
-    examples: |
-      - pc
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hello
+    - Good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Yes it did. thank you!
+    - OK, thats weird
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: request_help
+  examples: |
+    - How do I use my [Mac](system)
+    - How do I use my [mac]{"entity": "system", "value": "Mac"}
+    - How do I use my [PC](system)
+    - How do I use my [pc]{"entity": "system", "value": "PC"}
+    - How do I use my Windows computer
+    - How do I use my windows computer
+    - How do I use my [Apple]{"entity": "system", "value": "Mac"} computer
+    - How do I use my [apple]{"entity": "system", "value": "Mac"} computer
+    - I need help
+    - I need help with my [PC](system)
+    - I need help with my [Mac](system)
+    - How do I change windows on my PC
+    - How do I change windows on my [Mac](system)
+    - How do I change windows
+    - How do I change my desktop wallpaper
+    - How do I change tabs
+    - I'm having trouble with my computer
+    - Can you help me with my [mac]{"entity": "system", "value": "Mac"}?
+    - I'm having trouble with my [PC](system)
+    - Ok, I need help with my computer
+    - My computer isn't working
+- intent: clarify_system
+  examples: |
+    - [Mac](system)
+    - [apple]{"entity": "system", "value": "Mac"}
+    - [mac]{"entity": "system", "value": "Mac"}
+    - i have a [Mac](system)
+    - i have a [PC](system)
+    - im using a [mac]{"entity": "system", "value": "Mac"}
+    - im using a [pc]{"entity": "system", "value": "PC"}
+    - i'm using a [mac]{"entity": "system", "value": "Mac"}
+    - i'm using a [pc]{"entity": "system", "value": "PC"}
+    - i'm using an [apple]{"entity": "system", "value": "Mac"} computer
+    - i have an [apple]{"entity": "system", "value": "Mac"} computer
+    - [PC](system)
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - What is your name
+    - am I talking to a bot?
+    - am I talking to a human?
+    - wait, are you an AI?
+- intent: out_of_scope
+  examples: |
+    - Where is my dog
+    - My dog's name is Mac
+    - How do I make my printer work
+    - Does my computer have a virus
+    - Does my printer have a virus
+    - Where can I buy a toaster
+    - My phone is slow
+    - Does this dress loook good on me
+    - What is my shoe size
+    - how much wood could a cood chuck chuck if a wood chuck could chuck wood
+    - the quick brown fox jumped over the lazy dogs
+- intent: affirm+goodbye
+  examples: |
+    - Yes, goodbye
+    - yes, goodbye
+- intent: greet+bot_challenge
+  examples: |
+    - Hello, are you real?
+- synonym: Mac
+  examples: |
+    - mac
+    - Apple
+    - apple
+- synonym: PC
+  examples: |
+    - pc
