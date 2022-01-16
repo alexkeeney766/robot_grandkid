@@ -19,9 +19,9 @@ slots:
   system:
     type: categorical
     influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: system
+    # mappings:
+    #   - type: from_entity
+    #     entity: system
     values:
       - pc
       - mac
