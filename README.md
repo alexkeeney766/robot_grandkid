@@ -16,7 +16,6 @@ Currently, the assistant I've trained based on these data and configurations is 
 
 In the future, I'm hoping to generalize the assistant to provide in text answers based on the users questions, and fall back to providing search results to the users question.
 
-
 # Chat with the current bot!
 
-https://750b-35-247-28-86.ngrok.io/guest/conversations/production/1654b63914354dea83be9cd5ff035c52
+http://35.247.28.86:5002/guest/conversations/production/1654b63914354dea83be9cd5ff035c52https://750b-35-247-28-86.ngrok.io/guest/conversations/production/1654b63914354dea83be9cd5ff035c52
