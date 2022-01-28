@@ -1,0 +1,99 @@
+version: "2.0"
+nlu:
+- intent: change_settings
+  examples: |
+    - how do i [change](desired_action) my [wifi](setting_name) settings
+    - how do I [connect](desired_action) to [wifi](setting_name)
+    - where is the [wifi](setting_name) menu
+    - how do i [connect](desired_action) [bluetooth](setting_name)headphones
+    - how do I [connect](desired_action) a [bluetooth](setting_name) device
+    - how do I [set](desired_action) my [wallpaper]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - how do I [change](desired_action) my [desktop]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - [change](desired_action) [wifi](setting_name)
+    - [connect](desired_action) to [wifi](setting_name) network
+    - [add](desired_action) [bluetooth](setting_name)
+    - [connect](desired_action) to [bluetooth](setting_name)
+    - new [desktop]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - [change](desired_action) [desktop]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - [change](desired_action) [background]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - [change](desired_action) [wallpaper]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - how do i [hide](desired_action) my [dock](setting_name)
+    - how do I [change](desired_action) my [dock](setting_name)  settings
+    - [hide](desired_action) my [dock](setting_name)
+    - [unhide](desired_action) my [dock](setting_name)
+- intent: accessing_currently_open_apps
+  examples: |
+    - what do I have running
+    - what apps do I have running
+    - what programs are running
+    - what is my computer doing
+- intent: opening_programs
+  examples: |
+    - how do i [open](desired_action) a program
+    - where is [microsoft word]{"entity": "program", "value": "Microsoft Word"}
+    - where is [microsoft powerpoint]{"entity": "program", "value": "Microsoft Powerpoint"}
+    - where is [microsoft excel]{"entity": "program", "value": "Microsoft "}
+    - how do I [open](desired_action) [powerpoint]{"entity": "program", "value": "Microsoft Powerpoint"}
+    - how do I [make](desired_action) a spreadsheet in [excel]{"entity": "program", "value": "Microsoft Excel"}
+    - I want to write a [word]{"entity": "program", "value": "Microsoft Word"} document
+    - how do I use [Word]{"entity": "program", "value": "Microsoft Word"} on my [Mac](system)
+- intent: file_management
+  examples: |
+    - How do I [make](desired_action) a new [folder](term)
+    - How do I [copy](desired_action) a [file](term)
+    - How do I [move](desired_action) a new [folder](term)
+    - How do I [move](desired_action) a new [file](term)
+    - How do I [rename](desired_action) a new [folder](term)
+    - How do I [rename](desired_action) a new [file](term)
+    - How do I [delete](desired_action) a [folder](term)
+    - How do I [delete](desired_action) a [file](term)
+    - How do I [select several](desired_action) [files](term)
+    - how do I [select several](desired_action) [folders](term)
+    - how do I [select several](desired_action) [item]{"entity": "term", "value": "items"}
+    - how do I [select all](desired_action)  [files](term)  and [folders](term)
+    - I need help [deleteing](desired_action) [files](term) on my [PC](system)
+    - I need help deleting [files](term) on my [Mac](system)
+    - I need to [copy](desired_action) a [folder](term) on my [Mac](system)
+    - how do I duplicate [several](desired_action) [files](term) on [PC](system)?
+    - how do I [copy several](desired_action) [files](term) on my [PC](system)?
+    - can you hep me [copy](desired_action) a [file](term) on my [Mac](system)?
+- intent: terminology
+  examples: |
+    - what is a [file](term)
+    - what is a [folder](term)
+    - what is [wifi](term)
+    - what is [bluetooth](term)
+    - what is the [start menu](term)
+    - what is [action center](term)
+    - what is [tablet mode](term)
+- synonym: desktop_wallpaper
+  examples: |
+    - wallpaper
+    - desktop
+    - background
+- synonym: Microsoft Word
+  examples: |
+    - microsoft word
+    - word
+    - Word
+    - MS word
+    - micorosft word
+    - microsoft office word
+- synonym: Microsoft Powerpoint
+  examples: |
+    - microsoft powerpoint
+    - powerpoint
+    - Powerpoint
+    - MS Powerpoint
+    - micorosft Powerpoint
+    - microsoft office Powerpoint
+- synonym: Microsoft Excel
+  examples: |
+    - excel
+    - Excel
+    - MS Excel
+    - micorosft Excel
+    - microsoft office Excel
+- synonym: items
+  examples: |
+    - item

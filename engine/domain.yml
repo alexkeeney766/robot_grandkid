@@ -3,18 +3,27 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- accessing_currently_open_apps
 - affirm
 - affirm+goodbye
 - bot_challenge
+- change_settings
 - clarify_system
 - deny
+- file_management
 - goodbye
 - greet
 - greet+bot_challenge
+- opening_programs
 - out_of_scope
 - request_help
+- terminology
 entities:
 - system
+- setting_name
+- program
+- term
+- desired_action
 slots:
   system:
     type: categorical
@@ -22,14 +31,37 @@ slots:
     values:
     - pc
     - mac
+  setting_name:
+    type: categorical
+    influence_conversation: true
+    values:
+    - wifi
+    - bluetooth
+    - desktop_wallpaper
+    - timezone
+  program:
+    type: text
+    influence_conversation: true
+  term:
+    type: text
+    influence_conversation: true
+  has_office:
+    type: bool
+    influence_conversation: true
+  desired_action:
+    type: text
+    influence_conversation: true
+  questions:
+    type: list
+    influence_conversation: true
 responses:
   utter_greet:
   - text: Hello, how can I help?
   - text: Ready to assist! Give me your worst!
   utter_ask_system:
-  - text: What kind of computer do you use, Mac or PC?
+  - text: What operating system do you use, MacOS, Windows 10, or Windows 11?
   utter_did_that_help:
-  - text: Did that help you?
+  - text: Did that answer your question?
   utter_goodbye:
   - text: Goodbye, Please tell Alex Keeney how I did.
   utter_great:
@@ -37,11 +69,14 @@ responses:
   utter_sorry:
   - text: So sorry, I'm still training. Please tell me what went wrong.
   utter_define_scope:
-  - text: So sorry, I can only help with OS related questions at this time. What System are you using, PC or Mac?
+  - text: So sorry, I can only help with OS related questions at this time. What system are you using, MacOS, Windows 10, or Windows 11?
   utter_iamabot:
   - text: I am a bot, powered by Rasa, developed by Alex Keeney. He is to blame for any bad behaivor.
+  utter_i_can_help:
+  - text: I can help with that
 actions:
-- action_docs_selector
+- action_search_docs
+- action_resolve_question
 - utter_ask_system
 - utter_did_that_help
 - utter_goodbye
