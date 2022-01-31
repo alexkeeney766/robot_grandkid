@@ -1,0 +1,14 @@
+version: "2.0"
+nlu:
+- intent: inform
+  examples: |
+    - [Mac](system)
+    - [Apple]{'entity': 'system', 'value': 'Mac'}
+    - [PC](system)
+    - [Windows 10]{'entity': 'system', 'value': 'PC'}
+    - [Windows 11]{'entity': 'system', 'value': 'PC'}
+    - [Wifi]{'entity': 'setting_name', 'value': 'wifi'}
+    - [wifi]{'entity': 'setting_name', 'value': 'wifi'}
+    - [Buletooth]{'entity': 'setting_name', 'value': 'buletooth'}
+    - [buletooth]{'entity': 'setting_name', 'value': 'buletooth'}
+    

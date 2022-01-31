@@ -60,7 +60,7 @@ class FallbackQuestion(Question):
 
 
 class ChangeSettings(Question):
-    required_entities = Question.required_entities + ["setting_name", "desired_action"]
+    required_entities = Question.required_entities + ["setting_name"]
 
     def __init__(
         self, system: str, setting_name: str, desired_action: str = "change",
@@ -111,13 +111,13 @@ class OpeningPrograms(Question):
 
 
 class FileManagement(Question):
-    required_entities = Question.required_entities + ["term", "desired_action"]
+    required_entities = Question.required_entities + ["file_obj", "desired_action"]
 
     def __init__(
-        self, system: str, term: str, desired_action: str = "make",
+        self, system: str, file_obj: str, desired_action: str = "make",
     ):
 
-        self.term = term
+        self.file_obj = file_obj
         self.desired_action = desired_action
         super().__init__(system)
 
@@ -125,7 +125,7 @@ class FileManagement(Question):
         return (
             support_lookup[self.system]
             + " "
-            + " ".join([self.desired_action, self.term])
+            + " ".join([self.desired_action, self.file_obj])
         )
 
 
@@ -156,7 +156,9 @@ def get_required_entities(intent) -> list:
     try:
         return q_obj.required_entities
     except AttributeError as e:
-        raise IntentNotFoundError
+        raise IntentNotFoundError(
+            f'The intent "{intent}" does not exist in the question_lookup: \n quesion_lookup.keys = {[key for key in question_lookup.keys()]}'
+        )
 
 
 def make_question(intent: str, entities: dict) -> Question:

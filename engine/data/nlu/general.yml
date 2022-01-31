@@ -43,6 +43,7 @@ nlu:
     - OK, thats weird
     - Yes, thank you
     - yes thank you
+    - yes it did
 - intent: deny
   examples: |
     - no

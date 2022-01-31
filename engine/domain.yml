@@ -24,6 +24,7 @@ entities:
 - program
 - term
 - desired_action
+- file_obj
 slots:
   system:
     type: categorical
@@ -43,6 +44,15 @@ slots:
     type: text
     influence_conversation: true
   term:
+    type: categorical
+    influence_conversation: true
+    values:
+    - file
+    - folder
+    - several files
+    - several folders
+    - files and folders
+  file_obj:
     type: text
     influence_conversation: true
   has_office:
@@ -54,12 +64,25 @@ slots:
   questions:
     type: list
     influence_conversation: true
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
 responses:
   utter_greet:
   - text: Hello, how can I help?
   - text: Ready to assist! Give me your worst!
   utter_ask_system:
   - text: What operating system do you use, MacOS, Windows 10, or Windows 11?
+  utter_ask_program:
+  - text: Which Program would you like to open?
+  utter_ask_setting_name:
+  - text: Which Setting are you trying to change?
+  utter_ask_term:
+  - text: Are you trying to {desired_action} a file, folder, or multiple files and/or folders?
+  - text: Would you like to copy/make new/delete a file, folder, or multiple files and/or folders?
+  utter_ask_desired_action:
+  - text: Are you trying to copy, make new, or delete?
+  - text: Are you trying to copy, make new, or delete your {file_obj}?
   utter_did_that_help:
   - text: Did that answer your question?
   utter_goodbye:
@@ -76,9 +99,55 @@ responses:
   - text: I can help with that
 actions:
 - action_search_docs
-- action_resolve_question
 - utter_ask_system
 - utter_did_that_help
 - utter_goodbye
 - utter_greet
 - utter_iamabot
+forms:
+  change_settings_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+      setting_name:
+      - type: from_entity
+        entity: setting_name
+      desired_action:
+      - type: from_entity
+        entity: desired_action
+  accessing_currently_open_apps_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+  opening_programs_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+      program:
+      - type: from_entity
+        entity: program
+      desired_action:
+      - type: from_entity
+        entity: desired_action
+  file_management_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+      file_obj:
+      - type: from_entity
+        entity: file_obj
+      desired_action:
+      - type: from_entity
+        entity: desired_action
+  terminology_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+      term:
+      - type: from_entity
+        entity: term

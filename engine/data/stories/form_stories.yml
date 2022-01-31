@@ -1,0 +1,125 @@
+version: "2.0"
+stories:
+- story: Happy Path change_settings Form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: change_settings
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - active_loop: null
+  - action: action_search_docs
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Happy Path open apps Form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: accessing_currently_open_apps
+  - action: accessing_currently_open_apps_form
+  - active_loop: accessing_currently_open_apps_form
+  - active_loop: null
+  - action: action_search_docs
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Happy Path file_management Form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: file_management
+  - action: file_management_form
+  - active_loop: file_management_form
+  - active_loop: null
+  - action: action_search_docs
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Happy path terminology Form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: terminology
+  - action: terminology_form
+  - active_loop: terminology_form
+  - active_loop: null
+  - action: action_search_docs
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID d3b5d04f7d0a4fe99e619eda16207701
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: change_settings
+    entities:
+    - desired_action: change
+    - setting_name: wifi
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - desired_action: change
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - desired_action: change
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - desired_action: change
+  - slot_was_set:
+    - requested_slot: system
+  - intent: clarify_system
+    entities:
+    - system: MacOS
+  - slot_was_set:
+    - system: MacOS
+  - action: change_settings_form
+  - slot_was_set:
+    - system: MacOS
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_search_docs
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID dd7c059b343d496f9166db7065d7de8f
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: change_settings
+    entities:
+    - desired_action: change
+    - setting_name: wifi
+    - system: Mac
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - desired_action: change
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - desired_action: change
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - desired_action: change
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_search_docs
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye

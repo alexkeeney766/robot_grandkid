@@ -5,7 +5,7 @@ nlu:
     - how do i [change](desired_action) my [wifi](setting_name) settings
     - how do I [connect](desired_action) to [wifi](setting_name)
     - where is the [wifi](setting_name) menu
-    - how do i [connect](desired_action) [bluetooth](setting_name)headphones
+    - how do i [connect](desired_action) [bluetooth](setting_name) headphones
     - how do I [connect](desired_action) a [bluetooth](setting_name) device
     - how do I [set](desired_action) my [wallpaper]{"entity": "setting_name", "value": "desktop_wallpaper"}
     - how do I [change](desired_action) my [desktop]{"entity": "setting_name", "value": "desktop_wallpaper"}
@@ -21,6 +21,7 @@ nlu:
     - how do I [change](desired_action) my [dock](setting_name)  settings
     - [hide](desired_action) my [dock](setting_name)
     - [unhide](desired_action) my [dock](setting_name)
+    - How do I [change](desired_action) my [Wifi](setting_name) Settings on my [Mac](system)?
 - intent: accessing_currently_open_apps
   examples: |
     - what do I have running
@@ -37,26 +38,27 @@ nlu:
     - how do I [make](desired_action) a spreadsheet in [excel]{"entity": "program", "value": "Microsoft Excel"}
     - I want to write a [word]{"entity": "program", "value": "Microsoft Word"} document
     - how do I use [Word]{"entity": "program", "value": "Microsoft Word"} on my [Mac](system)
+    - can you help me [open](desired_action) [micorosft](program) [word]{"entity": "program", "value": "Microsoft Word"} on my [mac]{"entity": "system", "value": "Mac"}?
 - intent: file_management
   examples: |
-    - How do I [make](desired_action) a new [folder](term)
-    - How do I [copy](desired_action) a [file](term)
-    - How do I [move](desired_action) a new [folder](term)
-    - How do I [move](desired_action) a new [file](term)
-    - How do I [rename](desired_action) a new [folder](term)
-    - How do I [rename](desired_action) a new [file](term)
-    - How do I [delete](desired_action) a [folder](term)
-    - How do I [delete](desired_action) a [file](term)
-    - How do I [select several](desired_action) [files](term)
-    - how do I [select several](desired_action) [folders](term)
-    - how do I [select several](desired_action) [item]{"entity": "term", "value": "items"}
-    - how do I [select all](desired_action)  [files](term)  and [folders](term)
-    - I need help [deleteing](desired_action) [files](term) on my [PC](system)
-    - I need help deleting [files](term) on my [Mac](system)
-    - I need to [copy](desired_action) a [folder](term) on my [Mac](system)
-    - how do I duplicate [several](desired_action) [files](term) on [PC](system)?
-    - how do I [copy several](desired_action) [files](term) on my [PC](system)?
-    - can you hep me [copy](desired_action) a [file](term) on my [Mac](system)?
+    - How do I [make](desired_action) a new [folder](file_obj)
+    - How do I [copy](desired_action) a [file](file_obj)
+    - How do I [move](desired_action) a new [folder](file_obj)
+    - How do I [move](desired_action) a new [file](file_obj)
+    - How do I [rename](desired_action) a new [folder](file_obj)
+    - How do I [rename](desired_action) a new [file](file_obj)
+    - How do I [delete](desired_action) a [folder](file_obj)
+    - How do I [delete](desired_action) a [file](file_obj)
+    - How do I [select several](desired_action) [files](file_obj)
+    - how do I [select several](desired_action) [folders](file_obj)
+    - how do I [select several](desired_action) [item]{"entity": "file_obj", "value": "items"}
+    - how do I [select all](desired_action)  [files](file_obj)  and [folders](file_obj)
+    - I need help [deleteing](desired_action) [files](file_obj) on my [PC](system)
+    - I need help deleting [files](file_obj) on my [Mac](system)
+    - I need to [copy](desired_action) a [folder](file_obj) on my [Mac](system)
+    - how do I duplicate [several](desired_action) [files](file_obj) on [PC](system)?
+    - how do I [copy several](desired_action) [files](file_obj) on my [PC](system)?
+    - can you hep me [copy](desired_action) a [file](file_obj) on my [Mac](system)?
 - intent: terminology
   examples: |
     - what is a [file](term)
@@ -87,6 +89,9 @@ nlu:
     - MS Powerpoint
     - micorosft Powerpoint
     - microsoft office Powerpoint
+- synonym: 'Microsoft '
+  examples: |
+    - microsoft excel
 - synonym: Microsoft Excel
   examples: |
     - excel

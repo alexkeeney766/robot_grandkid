@@ -1,0 +1,225 @@
+# version: "2.0"
+# stories:
+#   - story: Happy Path change_settings 0
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: change_settings
+#         entities:
+#           - desired_action: connect
+#           - setting_name: wifi
+#           - system: Mac
+#       - slot_was_set:
+#           - desired_action: connect
+#       - slot_was_set:
+#           - setting_name: wifi
+#       - slot_was_set:
+#           - system: Mac
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy Path change_settings 1
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: change_settings
+#         entities:
+#           - desired_action: add
+#           - setting_name: bluetooth
+#           - system: Windows 10
+#       - slot_was_set:
+#           - desired_action: add
+#       - slot_was_set:
+#           - setting_name: bluetooth
+#       - slot_was_set:
+#           - system: Windows 10
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy Path change_settings 2
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: change_settings
+#         entities:
+#           - desired_action: change
+#           - setting_name: desktop_wallpaper
+#           - system: PC
+#       - slot_was_set:
+#           - desired_action: change
+#       - slot_was_set:
+#           - setting_name: desktop_wallpaper
+#       - slot_was_set:
+#           - system: PC
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy Path open apps
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: accessing_currently_open_apps
+#         entities:
+#           - system: Mac
+#       - slot_was_set:
+#           - system: Mac
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy Path file_management 0
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: file_management
+#         entities:
+#           - desired_action: make
+#           - file_obj: folder
+#           - system: PC
+#       - slot_was_set:
+#           - desired_action: make
+#       - slot_was_set:
+#           - file_obj: folder
+#       - slot_was_set:
+#           - system: PC
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy Path file_management 1
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: file_management
+#         entities:
+#           - desired_action: copy
+#           - file_obj: file
+#           - system: Mac
+#       - slot_was_set:
+#           - desired_action: copy
+#       - slot_was_set:
+#           - file_obj: file
+#       - slot_was_set:
+#           - system: Mac
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy Path file_management 2
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: file_management
+#         entities:
+#           - desired_action: delete
+#           - file_obj: file
+#           - system: Windows 10
+#       - slot_was_set:
+#           - desired_action: delete
+#       - slot_was_set:
+#           - file_obj: file
+#       - slot_was_set:
+#           - system: Windows 10
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy path terminology 0
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: terminology
+#         entities:
+#           - term: file
+#           - system: Windows 10
+#       - slot_was_set:
+#           - term: file
+#       - slot_was_set:
+#           - system: Windows 10
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy path terminology 1
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: terminology
+#         entities:
+#           - term: wifi
+#           - system: Windows 10
+#       - slot_was_set:
+#           - term: wifi
+#       - slot_was_set:
+#           - system: Windows 10
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy path terminology 2
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: terminology
+#         entities:
+#           - term: bluetooth
+#           - system: Mac
+#       - slot_was_set:
+#           - term: bluetooth
+#       - slot_was_set:
+#           - system: Mac
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy path terminology 3
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: terminology
+#         entities:
+#           - term: Start Menu
+#           - system: Windows 10
+#       - slot_was_set:
+#           - term: Start Menu
+#       - slot_was_set:
+#           - system: Windows 10
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy path terminology 4
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: terminology
+#         entities:
+#           - term: Dock
+#           - system: Mac
+#       - slot_was_set:
+#           - term: Dock
+#       - slot_was_set:
+#           - system: Mac
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Happy path terminology 5
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: terminology
+#         entities:
+#           - term: Spotlight Search
+#           - system: Mac
+#       - slot_was_set:
+#           - term: Spotlight Search
+#       - slot_was_set:
+#           - system: Mac
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
