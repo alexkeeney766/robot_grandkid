@@ -54,13 +54,13 @@ class FallbackQuestion(Question):
         super().__init__(system)
 
     def search_query(self) -> str:
-        return " ".join(
+        return "%20".join(
             [support_lookup[self.system]] + [val for val in self.entities.values()]
         )
 
 
 class ChangeSettings(Question):
-    required_entities = Question.required_entities + ["setting_name"]
+    required_entities = Question.required_entities + ["setting_name", 'desired_action']
 
     def __init__(
         self, system: str, setting_name: str, desired_action: str = "change",
@@ -73,8 +73,8 @@ class ChangeSettings(Question):
     def search_query(self) -> str:
         return (
             support_lookup[self.system]
-            + " "
-            + " ".join([self.desired_action, self.setting_name])
+            + "%20"
+            + "%20".join([self.desired_action, self.setting_name])
         )
 
 
@@ -105,8 +105,8 @@ class OpeningPrograms(Question):
     def search_query(self) -> str:
         return (
             support_lookup[self.system]
-            + " "
-            + " ".join([self.desired_action, self.program])
+            + "%20"
+            + "%20".join([self.desired_action, self.program])
         )
 
 
@@ -124,8 +124,8 @@ class FileManagement(Question):
     def search_query(self) -> str:
         return (
             support_lookup[self.system]
-            + " "
-            + " ".join([self.desired_action, self.file_obj])
+            + "%20"
+            + "%20".join([self.desired_action, self.file_obj])
         )
 
 
@@ -139,7 +139,7 @@ class Terminology(Question):
         super().__init__(system)
 
     def search_query(self) -> str:
-        return support_lookup[self.system] + " " + self.term
+        return support_lookup[self.system] + "%20" + self.term
 
 
 question_lookup = {
@@ -152,7 +152,7 @@ question_lookup = {
 
 
 def get_required_entities(intent) -> list:
-    q_obj = question_lookup.get(intent, None)
+    q_obj = question_lookup.get(intent, FallbackQuestion)
     try:
         return q_obj.required_entities
     except AttributeError as e:
@@ -162,6 +162,6 @@ def get_required_entities(intent) -> list:
 
 
 def make_question(intent: str, entities: dict) -> Question:
-    q_obj = question_lookup.get(intent, None)
+    q_obj = question_lookup.get(intent, FallbackQuestion)
 
     return q_obj(**entities)

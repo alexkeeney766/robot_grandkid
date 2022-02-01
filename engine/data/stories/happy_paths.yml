@@ -1,5 +1,61 @@
-# version: "2.0"
-# stories:
+version: "2.0"
+stories:
+  - story: happy path with ask for specific question 0
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_prompt_for_question
+      - intent: change_settings
+      - action: utter_change_settings
+      - active_loop: change_settings_form
+      - active_loop: null
+      - action: action_search_docs
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
+  - story: happy path with ask for specific question 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_prompt_for_question
+      - intent: accessing_currently_open_apps
+      - action: accessing_currently_open_apps_form
+      - active_loop: accessing_currently_open_apps_form
+      - active_loop: null
+      - action: action_search_docs
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
+  - story: Happy Path file_management Form
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_prompt_for_question
+      - intent: file_management
+      - action: file_management_form
+      - active_loop: file_management_form
+      - active_loop: null
+      - action: action_search_docs
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
+  - story: Happy path terminology Form
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_help
+      - action: utter_prompt_for_question
+      - intent: terminology
+      - action: terminology_form
+      - active_loop: terminology_form
+      - active_loop: null
+      - action: action_search_docs
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_goodbye
 #   - story: Happy Path change_settings 0
 #     steps:
 #       - intent: greet

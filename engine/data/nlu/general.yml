@@ -19,6 +19,7 @@ nlu:
     - Good afternoon
     - Good evening
     - Good morning
+    - Good Evening, can you help me with my computer?
 - intent: goodbye
   examples: |
     - cu
@@ -69,7 +70,6 @@ nlu:
     - How do I change windows on my PC
     - How do I change windows on my [Mac](system)
     - How do I change windows
-    - How do I change my desktop wallpaper
     - How do I change tabs
     - I'm having trouble with my computer
     - Can you help me with my [mac]{"entity": "system", "value": "Mac"}?
@@ -77,20 +77,6 @@ nlu:
     - Ok, I need help with my computer
     - My computer isn't working
     - I need help with my computer.
-- intent: clarify_system
-  examples: |
-    - [Mac](system)
-    - [apple]{"entity": "system", "value": "Mac"}
-    - [mac]{"entity": "system", "value": "Mac"}
-    - i have a [Mac](system)
-    - i have a [PC](system)
-    - im using a [mac]{"entity": "system", "value": "Mac"}
-    - im using a [pc]{"entity": "system", "value": "PC"}
-    - i'm using a [mac]{"entity": "system", "value": "Mac"}
-    - i'm using a [pc]{"entity": "system", "value": "PC"}
-    - i'm using an [apple]{"entity": "system", "value": "Mac"} computer
-    - i have an [apple]{"entity": "system", "value": "Mac"} computer
-    - [PC](system)
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -120,11 +106,6 @@ nlu:
 - intent: greet+bot_challenge
   examples: |
     - Hello, are you real?
-- synonym: Mac
-  examples: |
-    - mac
-    - Apple
-    - apple
 - synonym: PC
   examples: |
     - pc

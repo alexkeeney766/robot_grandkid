@@ -3,12 +3,27 @@ nlu:
 - intent: inform
   examples: |
     - [Mac](system)
-    - [Apple]{'entity': 'system', 'value': 'Mac'}
+    - [Apple]{"entity": "system", "value": "Mac"}
     - [PC](system)
-    - [Windows 10]{'entity': 'system', 'value': 'PC'}
-    - [Windows 11]{'entity': 'system', 'value': 'PC'}
-    - [Wifi]{'entity': 'setting_name', 'value': 'wifi'}
-    - [wifi]{'entity': 'setting_name', 'value': 'wifi'}
-    - [Buletooth]{'entity': 'setting_name', 'value': 'buletooth'}
-    - [buletooth]{'entity': 'setting_name', 'value': 'buletooth'}
-    
+    - [Windows 10]{"entity": "system", "value": "PC"}
+    - [Windows 11]{"entity": "system", "value": "PC"}
+    - [Wifi]{"entity": "setting_name", "value": "wifi"}
+    - [wifi](setting_name)
+    - [Buletooth]{"entity": "setting_name", "value": "buletooth"}
+    - [buletooth](setting_name)
+    - [apple]{"entity": "system", "value": "Mac"}
+    - [mac]{"entity": "system", "value": "Mac"}
+    - i have a [Mac](system)
+    - i have a [PC](system)
+    - im using a [mac]{"entity": "system", "value": "Mac"}
+    - im using a [pc]{"entity": "system", "value": "PC"}
+    - i'm using a [mac]{"entity": "system", "value": "Mac"}
+    - i'm using a [pc]{"entity": "system", "value": "PC"}
+    - i'm using an [apple]{"entity": "system", "value": "Mac"} computer
+    - i have an [apple]{"entity": "system", "value": "Mac"} computer
+- synonym: wifi
+  examples: |
+    - Wifi
+- synonym: buletooth
+  examples: |
+    - Buletooth

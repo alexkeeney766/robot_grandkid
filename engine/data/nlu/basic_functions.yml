@@ -22,6 +22,7 @@ nlu:
     - [hide](desired_action) my [dock](setting_name)
     - [unhide](desired_action) my [dock](setting_name)
     - How do I [change](desired_action) my [Wifi](setting_name) Settings on my [Mac](system)?
+    - Can you help me [connect](desired_action) my [Bluetooth](setting_name) headphones to my [PC](system)?
 - intent: accessing_currently_open_apps
   examples: |
     - what do I have running
@@ -99,6 +100,9 @@ nlu:
     - MS Excel
     - micorosft Excel
     - microsoft office Excel
+- synonym: Mac
+  examples: |
+    - mac
 - synonym: items
   examples: |
     - item

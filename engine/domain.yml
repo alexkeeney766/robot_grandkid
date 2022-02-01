@@ -8,12 +8,12 @@ intents:
 - affirm+goodbye
 - bot_challenge
 - change_settings
-- clarify_system
 - deny
 - file_management
 - goodbye
 - greet
 - greet+bot_challenge
+- inform
 - opening_programs
 - out_of_scope
 - request_help
@@ -97,6 +97,10 @@ responses:
   - text: I am a bot, powered by Rasa, developed by Alex Keeney. He is to blame for any bad behaivor.
   utter_i_can_help:
   - text: I can help with that
+  utter_prompt_for_question:
+  - text: Can you tell me what the specific issue is?
+  - text: What specifically is the problem?
+  - text: I need a specific question like "how do I connect a bluetooth deveice"
 actions:
 - action_search_docs
 - utter_ask_system
@@ -113,9 +117,6 @@ forms:
       setting_name:
       - type: from_entity
         entity: setting_name
-      desired_action:
-      - type: from_entity
-        entity: desired_action
   accessing_currently_open_apps_form:
     required_slots:
       system:

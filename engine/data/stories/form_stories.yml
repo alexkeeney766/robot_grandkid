@@ -72,7 +72,7 @@ stories:
     - desired_action: change
   - slot_was_set:
     - requested_slot: system
-  - intent: clarify_system
+  - intent: inform
     entities:
     - system: MacOS
   - slot_was_set:
@@ -116,6 +116,78 @@ stories:
     - setting_name: wifi
   - slot_was_set:
     - desired_action: change
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_search_docs
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID f5353869dc57482c8b037e64ab394168
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: change_settings
+    entities:
+    - desired_action: connect
+    - setting_name: bluetooth
+    - system: PC
+  - slot_was_set:
+    - system: PC
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - desired_action: connect
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - system: PC
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - desired_action: connect
+  - slot_was_set:
+    - system: PC
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - desired_action: connect
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_search_docs
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID 2ec0ed97c3f740b5891a174912e1db59
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: change_settings
+    entities:
+    - desired_action: connect
+    - setting_name: Bluetooth
+    - system: PC
+  - slot_was_set:
+    - system: PC
+  - slot_was_set:
+    - setting_name: Bluetooth
+  - slot_was_set:
+    - desired_action: connect
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - system: PC
+  - slot_was_set:
+    - setting_name: Bluetooth
+  - slot_was_set:
+    - desired_action: connect
+  - slot_was_set:
+    - system: PC
+  - slot_was_set:
+    - setting_name: Bluetooth
+  - slot_was_set:
+    - desired_action: connect
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
