@@ -103,11 +103,20 @@ responses:
   - text: I need a specific question like "how do I connect a bluetooth deveice"
 actions:
 - action_search_docs
+- utter_greet
 - utter_ask_system
+- utter_ask_program
+- utter_ask_setting_name
+- utter_ask_term
+- utter_ask_desired_action
 - utter_did_that_help
 - utter_goodbye
-- utter_greet
+- utter_great
+- utter_sorry
+- utter_define_scope
 - utter_iamabot
+- utter_i_can_help
+- utter_prompt_for_question
 forms:
   change_settings_form:
     required_slots:

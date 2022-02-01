@@ -7,7 +7,7 @@ stories:
       - intent: request_help
       - action: utter_prompt_for_question
       - intent: change_settings
-      - action: utter_change_settings
+      - action: change_settings_form
       - active_loop: change_settings_form
       - active_loop: null
       - action: action_search_docs
