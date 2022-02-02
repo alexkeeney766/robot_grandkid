@@ -7,10 +7,11 @@ stories:
       - intent: request_help
       - action: utter_prompt_for_question
       - intent: change_settings
+      - action: action_new_question
       - action: change_settings_form
       - active_loop: change_settings_form
       - active_loop: null
-      - action: action_search_docs
+      - action: action_resolve_question
       - action: utter_did_that_help
       - intent: affirm
       - action: utter_goodbye
@@ -21,10 +22,11 @@ stories:
       - intent: request_help
       - action: utter_prompt_for_question
       - intent: accessing_currently_open_apps
+      - action: action_new_question
       - action: accessing_currently_open_apps_form
       - active_loop: accessing_currently_open_apps_form
       - active_loop: null
-      - action: action_search_docs
+      - action: action_resolve_question
       - action: utter_did_that_help
       - intent: affirm
       - action: utter_goodbye
@@ -35,10 +37,11 @@ stories:
       - intent: request_help
       - action: utter_prompt_for_question
       - intent: file_management
+      - action: action_new_question
       - action: file_management_form
       - active_loop: file_management_form
       - active_loop: null
-      - action: action_search_docs
+      - action: action_resolve_question
       - action: utter_did_that_help
       - intent: affirm
       - action: utter_goodbye
@@ -49,10 +52,11 @@ stories:
       - intent: request_help
       - action: utter_prompt_for_question
       - intent: terminology
+      - action: action_new_question
       - action: terminology_form
       - active_loop: terminology_form
       - active_loop: null
-      - action: action_search_docs
+      - action: action_resolve_question
       - action: utter_did_that_help
       - intent: affirm
       - action: utter_goodbye
@@ -71,7 +75,7 @@ stories:
 #           - setting_name: wifi
 #       - slot_was_set:
 #           - system: Mac
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -90,7 +94,7 @@ stories:
 #           - setting_name: bluetooth
 #       - slot_was_set:
 #           - system: Windows 10
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -109,7 +113,7 @@ stories:
 #           - setting_name: desktop_wallpaper
 #       - slot_was_set:
 #           - system: PC
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -122,7 +126,7 @@ stories:
 #           - system: Mac
 #       - slot_was_set:
 #           - system: Mac
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -141,7 +145,7 @@ stories:
 #           - file_obj: folder
 #       - slot_was_set:
 #           - system: PC
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -160,7 +164,7 @@ stories:
 #           - file_obj: file
 #       - slot_was_set:
 #           - system: Mac
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -179,7 +183,7 @@ stories:
 #           - file_obj: file
 #       - slot_was_set:
 #           - system: Windows 10
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -195,7 +199,7 @@ stories:
 #           - term: file
 #       - slot_was_set:
 #           - system: Windows 10
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -211,7 +215,7 @@ stories:
 #           - term: wifi
 #       - slot_was_set:
 #           - system: Windows 10
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -227,7 +231,7 @@ stories:
 #           - term: bluetooth
 #       - slot_was_set:
 #           - system: Mac
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -243,7 +247,7 @@ stories:
 #           - term: Start Menu
 #       - slot_was_set:
 #           - system: Windows 10
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -259,7 +263,7 @@ stories:
 #           - term: Dock
 #       - slot_was_set:
 #           - system: Mac
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye
@@ -275,7 +279,7 @@ stories:
 #           - term: Spotlight Search
 #       - slot_was_set:
 #           - system: Mac
-#       - action: action_search_docs
+#       - action: action_resolve_question
 #       - action: utter_did_that_help
 #       - intent: affirm
 #       - action: utter_goodbye

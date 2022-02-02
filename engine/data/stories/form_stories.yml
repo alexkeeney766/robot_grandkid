@@ -5,10 +5,11 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: change_settings
+  - action: action_new_question
   - action: change_settings_form
   - active_loop: change_settings_form
   - active_loop: null
-  - action: action_search_docs
+  - action: action_resolve_question
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
@@ -17,10 +18,11 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: accessing_currently_open_apps
+  - action: action_new_question
   - action: accessing_currently_open_apps_form
   - active_loop: accessing_currently_open_apps_form
   - active_loop: null
-  - action: action_search_docs
+  - action: action_resolve_question
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
@@ -29,10 +31,11 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: file_management
+  - action: action_new_question
   - action: file_management_form
   - active_loop: file_management_form
   - active_loop: null
-  - action: action_search_docs
+  - action: action_resolve_question
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
@@ -41,10 +44,11 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: terminology
+  - action: action_new_question
   - action: terminology_form
   - active_loop: terminology_form
   - active_loop: null
-  - action: action_search_docs
+  - action: action_resolve_question
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
@@ -60,6 +64,7 @@ stories:
     - setting_name: wifi
   - slot_was_set:
     - desired_action: change
+  - action: action_new_question
   - action: change_settings_form
   - active_loop: change_settings_form
   - slot_was_set:
@@ -83,7 +88,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_search_docs
+  - action: action_resolve_question
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
@@ -102,6 +107,7 @@ stories:
     - setting_name: wifi
   - slot_was_set:
     - desired_action: change
+  - action: action_new_question
   - action: change_settings_form
   - active_loop: change_settings_form
   - slot_was_set:
@@ -119,7 +125,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_search_docs
+  - action: action_resolve_question
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
@@ -138,6 +144,7 @@ stories:
     - setting_name: bluetooth
   - slot_was_set:
     - desired_action: connect
+  - action: action_new_question
   - action: change_settings_form
   - active_loop: change_settings_form
   - slot_was_set:
@@ -155,7 +162,7 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_search_docs
+  - action: action_resolve_question
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
@@ -174,6 +181,7 @@ stories:
     - setting_name: Bluetooth
   - slot_was_set:
     - desired_action: connect
+  - action: action_new_question
   - action: change_settings_form
   - active_loop: change_settings_form
   - slot_was_set:
@@ -191,7 +199,247 @@ stories:
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_search_docs
+  - action: action_resolve_question
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID 216ea7cd5aa744f9952fef9012222dce
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - action: utter_prompt_for_question
+  - intent: change_settings
+    entities:
+    - desired_action: change
+    - setting_name: bluetooth
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - desired_action: change
+  - action: action_new_question
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - requested_slot: system
+  - slot_was_set:
+    - system: MacOS
+  - slot_was_set:
+    - system: MacOS
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - action: utter_did_that_help
+  - intent: affirm
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - desired_action: change
+  - action: utter_great
+  - action: utter_goodbye
+- story: Story from Conversation ID bd1febdc33a048a797eca51ef04f1be2
+  steps:
+  - intent: change_settings
+    entities:
+    - desired_action: connecting
+  - slot_was_set:
+    - desired_action: connecting
+  - action: action_new_question
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - requested_slot: system
+  - intent: inform
+    entities:
+    - system: PC
+  - slot_was_set:
+    - system: PC
+  - action: change_settings_form
+  - slot_was_set:
+    - system: PC
+  - slot_was_set:
+    - requested_slot: setting_name
+  - intent: inform
+    entities:
+    - setting_name: Bluetooth
+  - slot_was_set:
+    - setting_name: Bluetooth
+  - action: change_settings_form
+  - slot_was_set:
+    - setting_name: Bluetooth
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID 191507e047fb4622bc8042f796c15a91
+  steps:
+  - intent: change_settings
+    entities:
+    - desired_action: connect
+    - setting_name: bluetooth
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - desired_action: connect
+  - action: action_new_question
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - setting_name: bluetooth
+  - slot_was_set:
+    - requested_slot: system
+  - intent: inform
+    entities:
+    - system: Mac
+  - slot_was_set:
+    - system: Mac
+  - action: change_settings_form
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - action: utter_did_that_help
+- story: Story from Conversation ID 96879cb264c841c08583235209287198
+  steps:
+  - intent: request_help
+  - action: utter_prompt_for_question
+  - intent: change_settings
+    entities:
+    - desired_action: connect
+    - setting_name: wifi
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - desired_action: connect
+  - action: action_new_question
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - requested_slot: system
+  - intent: inform
+    entities:
+    - system: Mac
+  - slot_was_set:
+    - system: Mac
+  - action: change_settings_form
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - action: utter_did_that_help
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID a86d3c699f074affb45b2f2d742a9bd3
+  steps:
+  - slot_was_set:
+    - setting_name: wifi
+  - intent: inform
+    entities:
+    - system: Windows 10
+  - slot_was_set:
+    - system: Windows 10
+  - action: change_settings_form
+  - slot_was_set:
+    - system: Windows 10
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - action: utter_did_that_help
+  - intent: deny
+  - slot_was_set:
+    - system: Windows 10
+  - action: utter_sorry
+- story: Story from Conversation ID 08fb8021abf5450ba0b789a384af5d78
+  steps:
+  - intent: file_management
+    entities:
+    - desired_action: delete all
+    - file_obj: files
+    - file_obj: folder
+  - slot_was_set:
+    - file_obj: folder
+  - slot_was_set:
+    - desired_action: delete all
+  - action: action_new_question
+  - action: file_management_form
+  - active_loop: file_management_form
+  - slot_was_set:
+    - file_obj: folder
+  - slot_was_set:
+    - desired_action: delete all
+  - slot_was_set:
+    - file_obj:
+      - files
+      - folder
+  - slot_was_set:
+    - desired_action: delete all
+  - slot_was_set:
+    - requested_slot: system
+  - intent: inform
+    entities:
+    - system: Mac
+  - slot_was_set:
+    - system: Mac
+  - action: file_management_form
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID 90ca615e981846f2b973a84e660dfac8
+  steps:
+  - intent: change_settings
+    entities:
+    - desired_action: change
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - desired_action: change
+  - action: action_new_question
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - requested_slot: system
+  - intent: inform
+    entities:
+    - system: Mac
+  - slot_was_set:
+    - system: Mac
+  - action: change_settings_form
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye

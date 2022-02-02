@@ -20,6 +20,7 @@ nlu:
     - Good evening
     - Good morning
     - Good Evening, can you help me with my computer?
+    - HI!
 - intent: goodbye
   examples: |
     - cu
@@ -45,6 +46,11 @@ nlu:
     - Yes, thank you
     - yes thank you
     - yes it did
+    - Yes thank you
+    - Yes, thank you!
+    - Yes thank you!
+    - yea
+    - it did
 - intent: deny
   examples: |
     - no
@@ -77,6 +83,10 @@ nlu:
     - Ok, I need help with my computer
     - My computer isn't working
     - I need help with my computer.
+    - I'm having trouble with my [Mac](system)
+    - can you help me with my computer?
+    - Hello can you help me with my computer?
+    - my computer isn't working. can you help?
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -103,16 +113,14 @@ nlu:
     - Yes, goodbye
     - yes, goodbye
     - Yes it did. thank you and goodbye
+    - yup. bye
 - intent: greet+bot_challenge
   examples: |
     - Hello, are you real?
+    - Hi, are you a bot?
+    - Hi, are you a person?
+    - hello person?
+    - hey are you real?
 - synonym: PC
   examples: |
     - pc
-- synonym: Windows 11
-  examples: |
-    - winodws 11
-- synonym: Windows 10
-  examples: |
-    - windows 10
-    - windows

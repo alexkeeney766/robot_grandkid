@@ -20,6 +20,7 @@ rules:
   - rule: Activate accessing currently open apps Form
     steps:
       - intent: accessing_currently_open_apps
+      - action: action_new_question
       - action: accessing_currently_open_apps_form
       - active_loop: accessing_currently_open_apps_form
 
@@ -35,6 +36,7 @@ rules:
   - rule: File Management Form
     steps: 
       - intent: file_management
+      - action: action_new_question
       - action: file_management_form
       - active_loop: file_management_form
   
@@ -50,6 +52,7 @@ rules:
   - rule: Opening Programs Form
     steps: 
       - intent: opening_programs 
+      - action: action_new_question
       - action: opening_programs_form
       - active_loop: opening_programs_form
 
@@ -65,6 +68,7 @@ rules:
   - rule: Change Settings Form
     steps: 
       - intent: change_settings 
+      - action: action_new_question
       - action: change_settings_form
       - active_loop: change_settings_form
 
@@ -81,6 +85,7 @@ rules:
   - rule: Terminology Form
     steps: 
       - intent: terminology
+      - action: action_new_question
       - action: terminology_form
       - active_loop: terminology_form
 

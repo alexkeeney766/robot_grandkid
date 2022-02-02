@@ -102,7 +102,8 @@ responses:
   - text: What specifically is the problem?
   - text: I need a specific question like "how do I connect a bluetooth deveice"
 actions:
-- action_search_docs
+- action_new_question
+- action_resolve_question
 - utter_greet
 - utter_ask_system
 - utter_ask_program
