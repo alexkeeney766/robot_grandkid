@@ -9,6 +9,7 @@ support_lookup = {
     "Windows 10": "https://support.microsoft.com/search/results?query=",
     "Windows 11": "https://support.microsoft.com/search/results?query=",
     "Mac": "https://support.apple.com/kb/index?page=search&type=organic&src=support_searchbox_psp&locale=en_US&q=",
+    "MacOS": "https://support.apple.com/kb/index?page=search&type=organic&src=support_searchbox_psp&locale=en_US&q=",
 }
 
 
@@ -54,9 +55,9 @@ class FallbackQuestion(Question):
         super().__init__(system)
 
     def search_query(self) -> str:
-        return "%20".join(
+        return " ".join(
             [support_lookup[self.system]] + [val for val in self.entities.values()]
-        )
+        ).replace(' ', '%20')
 
 
 class ChangeSettings(Question):
@@ -73,9 +74,9 @@ class ChangeSettings(Question):
     def search_query(self) -> str:
         return (
             support_lookup[self.system]
-            + "%20"
-            + "%20".join([self.desired_action, self.setting_name])
-        )
+            + " "
+            + " ".join([self.desired_action, self.setting_name])
+        ).replace(' ', '%20')
 
 
 class AccessingCurrentlyOpenApps(Question):
@@ -88,7 +89,7 @@ class AccessingCurrentlyOpenApps(Question):
         super().__init__(system)
 
     def search_query(self) -> str:
-        return support_lookup[self.system] + " find currently open apps"
+        return (support_lookup[self.system] + " find currently open apps").replace(' ', '%20')
 
 
 class OpeningPrograms(Question):
@@ -105,9 +106,9 @@ class OpeningPrograms(Question):
     def search_query(self) -> str:
         return (
             support_lookup[self.system]
-            + "%20"
-            + "%20".join([self.desired_action, self.program])
-        )
+            + " "
+            + " ".join([self.desired_action, self.program])
+        ).replace(' ', '%20')
 
 
 class FileManagement(Question):
@@ -124,9 +125,9 @@ class FileManagement(Question):
     def search_query(self) -> str:
         return (
             support_lookup[self.system]
-            + "%20"
-            + "%20".join([self.desired_action, self.file_obj])
-        )
+            + " "
+            + " ".join([self.desired_action, self.file_obj])
+        ).replace(' ', '%20')
 
 
 class Terminology(Question):
@@ -139,7 +140,7 @@ class Terminology(Question):
         super().__init__(system)
 
     def search_query(self) -> str:
-        return support_lookup[self.system] + "%20" + self.term
+        return (support_lookup[self.system] + " " + self.term).replace(' ', '%20')
 
 
 question_lookup = {
