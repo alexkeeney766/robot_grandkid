@@ -87,6 +87,7 @@ nlu:
     - can you help me with my computer?
     - Hello can you help me with my computer?
     - my computer isn't working. can you help?
+    - help with computer?
 - intent: bot_challenge
   examples: |
     - are you a bot?

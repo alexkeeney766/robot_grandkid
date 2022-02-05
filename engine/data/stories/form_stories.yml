@@ -443,3 +443,98 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_goodbye
+- story: Story from Conversation ID ace933496080442299e0a9a961bf1b94
+  steps:
+  - intent: change_settings
+    entities:
+    - setting_name: wifi
+  - slot_was_set:
+    - setting_name: wifi
+  - action: action_new_question
+  - slot_was_set:
+    - questions: 1
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - setting_name: wifi
+  - slot_was_set:
+    - requested_slot: system
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - slot_was_set:
+    - questions: 0
+  - action: utter_did_that_help
+  - intent: affirm
+  - slot_was_set:
+    - setting_name: wifi
+  - action: utter_goodbye
+- story: Story from Conversation ID 95994f5abb4849f49558b38f585af654
+  steps:
+  - intent: change_settings
+    entities:
+    - desired_action: change
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - desired_action: change
+  - action: action_new_question
+  - slot_was_set:
+    - questions: 1
+  - action: change_settings_form
+  - active_loop: change_settings_form
+  - slot_was_set:
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - requested_slot: system
+  - slot_was_set:
+    - system: Windows 10
+  - slot_was_set:
+    - system: Windows 10
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - slot_was_set:
+    - questions: 0
+  - action: utter_did_that_help
+  - intent: affirm
+  - slot_was_set:
+    - setting_name: desktop_wallpaper
+  - slot_was_set:
+    - desired_action: change
+  - action: utter_goodbye
+- story: Story from Conversation ID 0ad33cee11274958bb46ab21899d229c
+  steps:
+  - intent: accessing_currently_open_apps
+  - action: action_new_question
+  - slot_was_set:
+    - questions: 1
+  - action: accessing_currently_open_apps_form
+  - active_loop: accessing_currently_open_apps_form
+  - slot_was_set:
+    - requested_slot: system
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - system: Mac
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_resolve_question
+  - slot_was_set:
+    - questions: 0
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_great
+  - action: utter_goodbye

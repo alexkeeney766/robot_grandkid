@@ -32,3 +32,4 @@ engine/events.db-shm
 .gitignore
 engine/rasa.db
 engine/events.db-wal
+engine/credentials.yml

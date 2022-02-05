@@ -26,12 +26,14 @@ nlu:
     - [windows]{"entity": "system", "value": "Windows 10"}
     - [pc]{"entity": "system", "value": "PC"}
     - [Bluetooth](setting_name)
+    - [Windows]{"entity": "system", "value": "Windows 10"}
 - synonym: buletooth
   examples: |
     - Buletooth
 - synonym: Windows 10
   examples: |
     - windows
+    - Windows
     - windows 10
 - synonym: Windows 11
   examples: |

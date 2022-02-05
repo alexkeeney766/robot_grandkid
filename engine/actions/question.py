@@ -28,119 +28,119 @@ class IntentNotFoundError(Exception):
 class Question(ABC):
     required_entities = ["system"]
 
-    def __init__(self, system: str):
-        self.missing_ents = []
-        self.system = system
-        self.fallback_utterance = (
-            "Sorry I can't do that by myself, heres a link that should help: "
-        )
-        self.validate_ents()
-
-    def validate_ents(self):
-        for ent in self.required_entities:
-            if ent is None:
-                self.missing_ents = ent
+    def __init__(self):
+        self.entities = {}
 
     @abstractmethod
-    def search_query(self):
+    def resolve(self):
         pass
+
+    def set_entity(self, ent_key: str, ent_val: str):
+        if ent_key == "system":
+            self.system = ent_val
+
+        elif ent_key in self.required_entities:
+            self.entities[ent_key] = ent_val
 
 
 class FallbackQuestion(Question):
-    def __init__(
-        self, system: str, **entities,
-    ):
+    def set_entity(self, ent_key: str, ent_val: str):
+        if ent_key == "system":
+            self.system = ent_val
 
-        self.entities = entities
-        super().__init__(system)
+        self.entities[ent_key] = ent_val
 
-    def search_query(self) -> str:
-        return " ".join(
-            [support_lookup[self.system]] + [val for val in self.entities.values()]
-        ).replace(' ', '%20')
+    def resolve(self) -> str:
+        return (
+            " ".join(
+                [support_lookup[self.system]] + [val for val in self.entities.values()]
+            )
+            .replace("_", " ")
+            .replace(" ", "%20")
+        )
 
 
 class ChangeSettings(Question):
-    required_entities = Question.required_entities + ["setting_name", 'desired_action']
+    required_entities = Question.required_entities + ["setting_name", "desired_action"]
 
-    def __init__(
-        self, system: str, setting_name: str, desired_action: str = "change",
-    ):
-
-        self.setting_name = setting_name
-        self.desired_action = desired_action
-        super().__init__(system)
-
-    def search_query(self) -> str:
+    def resolve(self) -> str:
         return (
-            support_lookup[self.system]
-            + " "
-            + " ".join([self.desired_action, self.setting_name])
-        ).replace(' ', '%20')
+            (
+                support_lookup[self.system]
+                + " "
+                + " ".join(
+                    [
+                        self.entities.get("desired_action", "change"),
+                        self.entities.get("setting_name"),
+                    ]
+                )
+            )
+            .replace("_", " ")
+            .replace(" ", "%20")
+        )
 
 
 class AccessingCurrentlyOpenApps(Question):
 
     required_entities = Question.required_entities
 
-    def __init__(
-        self, system: str,
-    ):
-        super().__init__(system)
-
-    def search_query(self) -> str:
-        return (support_lookup[self.system] + " find currently open apps").replace(' ', '%20')
+    def resolve(self) -> str:
+        return (
+            (support_lookup[self.system] + " find currently open apps")
+            .replace("_", " ")
+            .replace(" ", "%20")
+        )
 
 
 class OpeningPrograms(Question):
     required_entities = Question.required_entities + ["program", "desired_action"]
 
-    def __init__(
-        self, system: str, program: str, desired_action: str = "open",
-    ):
-
-        self.program = program
-        self.desired_action = desired_action
-        super().__init__(system)
-
-    def search_query(self) -> str:
+    def resolve(self) -> str:
         return (
-            support_lookup[self.system]
-            + " "
-            + " ".join([self.desired_action, self.program])
-        ).replace(' ', '%20')
+            (
+                support_lookup[self.system]
+                + " "
+                + " ".join(
+                    [
+                        self.entities.get("desired_action", "open"),
+                        self.entities.get("program"),
+                    ]
+                )
+            )
+            .replace("_", " ")
+            .replace(" ", "%20")
+        )
 
 
 class FileManagement(Question):
     required_entities = Question.required_entities + ["file_obj", "desired_action"]
 
-    def __init__(
-        self, system: str, file_obj: str, desired_action: str = "make",
-    ):
-
-        self.file_obj = file_obj
-        self.desired_action = desired_action
-        super().__init__(system)
-
-    def search_query(self) -> str:
+    def resolve(self) -> str:
         return (
-            support_lookup[self.system]
-            + " "
-            + " ".join([self.desired_action, self.file_obj])
-        ).replace(' ', '%20')
+            (
+                support_lookup[self.system]
+                + " "
+                + " ".join(
+                    [
+                        self.entities.get("desired_action",),
+                        self.entities.get("file_obj"),
+                    ]
+                )
+            )
+            .replace("_", " ")
+            .replace(" ", "%20")
+        )
 
 
 class Terminology(Question):
     required_entities = Question.required_entities + ["term"]
 
-    def __init__(
-        self, system: str, term: str,
-    ):
-        self.term = term
-        super().__init__(system)
-
-    def search_query(self) -> str:
-        return (support_lookup[self.system] + " " + self.term).replace(' ', '%20')
+    def resolve(self) -> str:
+        return (
+            (support_lookup[self.system] + " " + self.term)
+            .replace("_", " ")
+            .replace(" ", "%20")
+        )
 
 
 question_lookup = {
@@ -162,7 +162,7 @@ def get_required_entities(intent) -> list:
         )
 
 
-def make_question(intent: str, entities: dict) -> Question:
+def make_question(intent: str) -> Question:
     q_obj = question_lookup.get(intent, FallbackQuestion)
 
-    return q_obj(**entities)
+    return q_obj()
