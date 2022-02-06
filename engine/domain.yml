@@ -43,7 +43,7 @@ slots:
   program:
     type: text
     influence_conversation: true
-  term:
+  file_obj:
     type: categorical
     influence_conversation: true
     values:
@@ -52,11 +52,8 @@ slots:
     - several files
     - several folders
     - files and folders
-  file_obj:
+  term:
     type: text
-    influence_conversation: true
-  has_office:
-    type: bool
     influence_conversation: true
   desired_action:
     type: text
@@ -104,6 +101,11 @@ responses:
 actions:
 - action_new_question
 - action_resolve_question
+- validate_change_settings_form
+- validate_accessing_currently_open_apps_form
+- validate_opening_programs_form
+- validate_file_management_form
+- validate_terminology_form
 - utter_greet
 - utter_ask_system
 - utter_ask_program

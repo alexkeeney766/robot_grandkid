@@ -38,6 +38,9 @@ nlu:
     - wheres the [wifi](setting_name) button?
     - wheres the button to [change](desired_action) my [wallpaper]{"entity": "setting_name", "value": "desktop_wallpaper"}?
     - I'm having a lot of trouble with my [wifi](setting_name), it won't [connect](desired_action). can you help?
+    - can you help me [connect](desired_action) to [wifi](setting_name)?
+    - can you help me with [wifi](setting_name)?
+    - my [wifi](setting_name)
 - intent: accessing_currently_open_apps
   examples: |
     - what do I have running
