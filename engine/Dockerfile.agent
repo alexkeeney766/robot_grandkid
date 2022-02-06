@@ -1,4 +1,4 @@
-FROM rasa/rasa:3.0.4-full
+FROM rasa/rasa:2.8.22-full
 
 WORKDIR /app
 
@@ -15,9 +15,6 @@ RUN apt-get update -qq && \
 # Make sure that all security updates are installed
 RUN apt-get update && apt-get dist-upgrade -y --no-install-recommends
 
-# Install extra requirements for actions code
-RUN pip install -r requirements.txt
-
 # Copy actions code to working directory
 COPY ./* /app/
 
@@ -25,4 +22,4 @@ COPY ./* /app/
 USER 1001
 
 # Start the action server
-CMD ['rasa' 'run' '--enable-api' '--cors="*"']
+CMD [ "rasa", "run", "--enable-api", "--cors='*'", "--port", "8080"]

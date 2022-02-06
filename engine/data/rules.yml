@@ -15,3 +15,87 @@ rules:
     steps:
       - intent: out_of_scope
       - action: utter_define_scope
+
+# Form Rules
+  - rule: Activate accessing currently open apps Form
+    steps:
+      - intent: accessing_currently_open_apps
+      - action: action_new_question
+      - action: accessing_currently_open_apps_form
+      - active_loop: accessing_currently_open_apps_form
+
+  - rule: Interuption in Activate accessing currently open apps Form
+    condition:
+      - active_loop: accessing_currently_open_apps_form
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+      - action: accessing_currently_open_apps_form 
+      - active_loop: accessing_currently_open_apps_form
+
+  - rule: File Management Form
+    steps: 
+      - intent: file_management
+      - action: action_new_question
+      - action: file_management_form
+      - active_loop: file_management_form
+  
+  - rule: Interuption in File Management Form
+    condition:
+      - active_loop: file_management_form
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+      - action: file_management_form 
+      - active_loop: file_management_form
+
+  - rule: Opening Programs Form
+    steps: 
+      - intent: opening_programs 
+      - action: action_new_question
+      - action: opening_programs_form
+      - active_loop: opening_programs_form
+
+  - rule: Interuption in Opening Programs Form
+    condition:
+      - active_loop: opening_programs_form
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+      - action: opening_programs_form 
+      - active_loop: opening_programs_form
+
+  - rule: Change Settings Form
+    steps: 
+      - intent: change_settings 
+      - action: action_new_question
+      - action: change_settings_form
+      - active_loop: change_settings_form
+
+  - rule: Interuption in Change Settings Form
+    condition:
+      - active_loop: change_settings_form
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+      - action: change_settings_form 
+      - active_loop: change_settings_form
+
+
+  - rule: Terminology Form
+    steps: 
+      - intent: terminology
+      - action: action_new_question
+      - action: terminology_form
+      - active_loop: terminology_form
+
+  - rule: Interuption in Terminology Form
+    condition:
+      - active_loop: terminology_form
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+      - action: terminology_form 
+      - active_loop: terminology_form
+
+

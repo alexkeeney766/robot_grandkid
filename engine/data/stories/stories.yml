@@ -1,0 +1,101 @@
+# version: "2.0"
+# stories:
+#   - story: Story from Conversation ID dd3cfbec307d4de59827316f91bfc53a
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: file_management
+#         entities:
+#           - file_obj: files
+#           - system: Mac
+#       - slot_was_set:
+#           - system: Mac
+#       - slot_was_set:
+#           - file_obj: files
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye
+#       - intent: goodbye
+#       - action: utter_goodbye
+#   - story: Story from Conversation ID c740c9393be94e39a5a1ceee44591917
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: file_management
+#         entities:
+#           - desired_action: copy
+#           - file_obj: folder
+#           - system: Mac
+#       - slot_was_set:
+#           - system: Mac
+#       - slot_was_set:
+#           - file_obj: folder
+#       - slot_was_set:
+#           - desired_action: copy
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm+goodbye
+#       - action: utter_goodbye
+#   - story: Story from Conversation ID e9629d53e6de4319b6bf9931d1332d45
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: file_management
+#         entities:
+#           - desired_action: copy several
+#           - file_obj: files
+#           - system: PC
+#       - slot_was_set:
+#           - system: PC
+#       - slot_was_set:
+#           - file_obj: files
+#       - slot_was_set:
+#           - desired_action: copy several
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - slot_was_set:
+#           - system: PC
+#       - slot_was_set:
+#           - file_obj: files
+#       - slot_was_set:
+#           - desired_action: copy several
+#       - intent: affirm
+#       - action: utter_goodbye
+#   - story: Story from Conversation ID bd1b9b1de4e9490cb2b8369ae1b1a345
+#     steps:
+#       - intent: opening_programs
+#         entities:
+#           - program: Microsoft Word
+#           - system: Mac
+#       - slot_was_set:
+#           - system: Mac
+#       - slot_was_set:
+#           - program: Microsoft Word
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - slot_was_set:
+#           - system: Mac
+#       - slot_was_set:
+#           - program: Microsoft Word
+#       - intent: affirm+goodbye
+#       - action: utter_great
+#       - action: utter_goodbye
+#   - story: Story from Conversation ID 7a89fb56186348d5b63619e91b2474c5
+#     steps:
+#       - intent: opening_programs
+#         entities:
+#           - desired_action: open
+#           - program: micorosft
+#           - program: Microsoft Word
+#           - system: Mac
+#       - slot_was_set:
+#           - system: Mac
+#       - slot_was_set:
+#           - program: Microsoft Word
+#       - slot_was_set:
+#           - desired_action: open
+#       - action: action_search_docs
+#       - action: utter_did_that_help
+#       - intent: affirm
+#       - action: utter_goodbye

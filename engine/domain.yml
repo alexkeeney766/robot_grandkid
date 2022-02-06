@@ -3,18 +3,28 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- accessing_currently_open_apps
 - affirm
 - affirm+goodbye
 - bot_challenge
-- clarify_system
+- change_settings
 - deny
+- file_management
 - goodbye
 - greet
 - greet+bot_challenge
+- inform
+- opening_programs
 - out_of_scope
 - request_help
+- terminology
 entities:
 - system
+- setting_name
+- program
+- term
+- desired_action
+- file_obj
 slots:
   system:
     type: categorical
@@ -22,14 +32,59 @@ slots:
     values:
     - pc
     - mac
+  setting_name:
+    type: categorical
+    influence_conversation: true
+    values:
+    - wifi
+    - bluetooth
+    - desktop_wallpaper
+    - timezone
+  program:
+    type: text
+    influence_conversation: true
+  term:
+    type: categorical
+    influence_conversation: true
+    values:
+    - file
+    - folder
+    - several files
+    - several folders
+    - files and folders
+  file_obj:
+    type: text
+    influence_conversation: true
+  has_office:
+    type: bool
+    influence_conversation: true
+  desired_action:
+    type: text
+    influence_conversation: true
+  questions:
+    type: list
+    influence_conversation: true
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
 responses:
   utter_greet:
   - text: Hello, how can I help?
   - text: Ready to assist! Give me your worst!
   utter_ask_system:
-  - text: What kind of computer do you use, Mac or PC?
+  - text: What operating system do you use, MacOS, Windows 10, or Windows 11?
+  utter_ask_program:
+  - text: Which Program would you like to open?
+  utter_ask_setting_name:
+  - text: Which Setting are you trying to change?
+  utter_ask_term:
+  - text: Are you trying to {desired_action} a file, folder, or multiple files and/or folders?
+  - text: Would you like to copy/make new/delete a file, folder, or multiple files and/or folders?
+  utter_ask_desired_action:
+  - text: Are you trying to copy, make new, or delete?
+  - text: Are you trying to copy, make new, or delete your {file_obj}?
   utter_did_that_help:
-  - text: Did that help you?
+  - text: Did that answer your question?
   utter_goodbye:
   - text: Goodbye, Please tell Alex Keeney how I did.
   utter_great:
@@ -37,13 +92,73 @@ responses:
   utter_sorry:
   - text: So sorry, I'm still training. Please tell me what went wrong.
   utter_define_scope:
-  - text: So sorry, I can only help with OS related questions at this time. What System are you using, PC or Mac?
+  - text: So sorry, I can only help with OS related questions at this time. What system are you using, MacOS, Windows 10, or Windows 11?
   utter_iamabot:
   - text: I am a bot, powered by Rasa, developed by Alex Keeney. He is to blame for any bad behaivor.
+  utter_i_can_help:
+  - text: I can help with that
+  utter_prompt_for_question:
+  - text: Can you tell me what the specific issue is?
+  - text: What specifically is the problem?
+  - text: I need a specific question like "how do I connect a bluetooth deveice"
 actions:
-- action_docs_selector
+- action_new_question
+- action_resolve_question
+- utter_greet
 - utter_ask_system
+- utter_ask_program
+- utter_ask_setting_name
+- utter_ask_term
+- utter_ask_desired_action
 - utter_did_that_help
 - utter_goodbye
-- utter_greet
+- utter_great
+- utter_sorry
+- utter_define_scope
 - utter_iamabot
+- utter_i_can_help
+- utter_prompt_for_question
+forms:
+  change_settings_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+      setting_name:
+      - type: from_entity
+        entity: setting_name
+  accessing_currently_open_apps_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+  opening_programs_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+      program:
+      - type: from_entity
+        entity: program
+      desired_action:
+      - type: from_entity
+        entity: desired_action
+  file_management_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+      file_obj:
+      - type: from_entity
+        entity: file_obj
+      desired_action:
+      - type: from_entity
+        entity: desired_action
+  terminology_form:
+    required_slots:
+      system:
+      - type: from_entity
+        entity: system
+      term:
+      - type: from_entity
+        entity: term

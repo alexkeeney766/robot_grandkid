@@ -1,0 +1,127 @@
+version: "2.0"
+nlu:
+- intent: change_settings
+  examples: |
+    - how do i [change](desired_action) my [wifi](setting_name) settings
+    - how do I [connect](desired_action) to [wifi](setting_name)
+    - where is the [wifi](setting_name) menu
+    - how do i [connect](desired_action) [bluetooth](setting_name) headphones
+    - how do I [connect](desired_action) a [bluetooth](setting_name) device
+    - how do I [set](desired_action) my [wallpaper]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - how do I [change](desired_action) my [desktop]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - [change](desired_action) [wifi](setting_name)
+    - [connect](desired_action) to [wifi](setting_name) network
+    - [add](desired_action) [bluetooth](setting_name)
+    - [connect](desired_action) to [bluetooth](setting_name)
+    - new [desktop]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - [change](desired_action) [desktop]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - [change](desired_action) [background]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - [change](desired_action) [wallpaper]{"entity": "setting_name", "value": "desktop_wallpaper"}
+    - how do i [hide](desired_action) my [dock](setting_name)
+    - how do I [change](desired_action) my [dock](setting_name)  settings
+    - [hide](desired_action) my [dock](setting_name)
+    - [unhide](desired_action) my [dock](setting_name)
+    - How do I [change](desired_action) my [Wifi](setting_name) Settings on my [Mac](system)?
+    - Can you help me [connect](desired_action) my [Bluetooth](setting_name) headphones to my [PC](system)?
+    - I'm having trouble with [WIFI]{"entity": "setting_name", "value": "wifi"}
+    - how do I [change](desired_action) my [bluetooth](setting_name) settings?
+    - how do I [change](desired_action) my [wifi](setting_name) settings
+    - can you help me opening the setting on my computer?
+    - How do I [change](desired_action) the [wifi](setting_name) settings on my [Mac](system)?
+    - How can I [connect](desired_action) a [bluetooth](setting_name) device to my [PC](system)?
+    - how do I [connect](desired_action) my Airpods to my [Mac](system)?
+    - I need help changing the settings on my computer
+    - [wifi](setting_name)
+    - I need help [connecting](desired_action) a device
+    - how do I [connect](desired_action) a [bluetooth](setting_name) device?
+    - how do I [connect](desired_action) to [wifi](setting_name)?
+    - wheres the [wifi](setting_name) button?
+    - wheres the button to [change](desired_action) my [wallpaper]{"entity": "setting_name", "value": "desktop_wallpaper"}?
+    - I'm having a lot of trouble with my [wifi](setting_name), it won't [connect](desired_action). can you help?
+- intent: accessing_currently_open_apps
+  examples: |
+    - what do I have running
+    - what apps do I have running
+    - what programs are running
+    - what is my computer doing
+- intent: opening_programs
+  examples: |
+    - how do i [open](desired_action) a program
+    - where is [microsoft word]{"entity": "program", "value": "Microsoft Word"}
+    - where is [microsoft powerpoint]{"entity": "program", "value": "Microsoft Powerpoint"}
+    - where is [microsoft excel]{"entity": "program", "value": "Microsoft "}
+    - how do I [open](desired_action) [powerpoint]{"entity": "program", "value": "Microsoft Powerpoint"}
+    - how do I [make](desired_action) a spreadsheet in [excel]{"entity": "program", "value": "Microsoft Excel"}
+    - I want to write a [word]{"entity": "program", "value": "Microsoft Word"} document
+    - how do I use [Word]{"entity": "program", "value": "Microsoft Word"} on my [Mac](system)
+    - can you help me [open](desired_action) [micorosft](program) [word]{"entity": "program", "value": "Microsoft Word"} on my [mac]{"entity": "system", "value": "Mac"}?
+- intent: file_management
+  examples: |
+    - How do I [make](desired_action) a new [folder](file_obj)
+    - How do I [copy](desired_action) a [file](file_obj)
+    - How do I [move](desired_action) a new [folder](file_obj)
+    - How do I [move](desired_action) a new [file](file_obj)
+    - How do I [rename](desired_action) a new [folder](file_obj)
+    - How do I [rename](desired_action) a new [file](file_obj)
+    - How do I [delete](desired_action) a [folder](file_obj)
+    - How do I [delete](desired_action) a [file](file_obj)
+    - How do I [select several](desired_action) [files](file_obj)
+    - how do I [select several](desired_action) [folders](file_obj)
+    - how do I [select several](desired_action) [item]{"entity": "file_obj", "value": "items"}
+    - how do I [select all](desired_action)  [files](file_obj)  and [folders](file_obj)
+    - I need help [deleteing](desired_action) [files](file_obj) on my [PC](system)
+    - I need help deleting [files](file_obj) on my [Mac](system)
+    - I need to [copy](desired_action) a [folder](file_obj) on my [Mac](system)
+    - how do I duplicate [several](desired_action) [files](file_obj) on [PC](system)?
+    - how do I [copy several](desired_action) [files](file_obj) on my [PC](system)?
+    - can you hep me [copy](desired_action) a [file](file_obj) on my [Mac](system)?
+    - how do I [delete all](desired_action) the [files](file_obj) in a [folder](file_obj)?
+- intent: terminology
+  examples: |
+    - what is a [file](term)
+    - what is a [folder](term)
+    - what is [wifi](term)
+    - what is [bluetooth](term)
+    - what is the [start menu](term)
+    - what is [action center](term)
+    - what is [tablet mode](term)
+- synonym: desktop_wallpaper
+  examples: |
+    - wallpaper
+    - desktop
+    - background
+- synonym: wifi
+  examples: |
+    - WIFI
+- synonym: Microsoft Word
+  examples: |
+    - microsoft word
+    - word
+    - Word
+    - MS word
+    - micorosft word
+    - microsoft office word
+- synonym: Microsoft Powerpoint
+  examples: |
+    - microsoft powerpoint
+    - powerpoint
+    - Powerpoint
+    - MS Powerpoint
+    - micorosft Powerpoint
+    - microsoft office Powerpoint
+- synonym: 'Microsoft '
+  examples: |
+    - microsoft excel
+- synonym: Microsoft Excel
+  examples: |
+    - excel
+    - Excel
+    - MS Excel
+    - micorosft Excel
+    - microsoft office Excel
+- synonym: Mac
+  examples: |
+    - mac
+- synonym: items
+  examples: |
+    - item

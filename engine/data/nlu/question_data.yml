@@ -1,0 +1,38 @@
+version: "2.0"
+nlu:
+- intent: inform
+  examples: |
+    - [Mac](system)
+    - [MacOS]{"entity": "system", "value": "Mac"}
+    - [Apple]{"entity": "system", "value": "Mac"}
+    - [apple]{"entity": "system", "value": "Mac"}
+    - [mac]{"entity": "system", "value": "Mac"}
+    - [PC](system)
+    - [Windows 10]{"entity": "system", "value": "PC"}
+    - [Windows 11]{"entity": "system", "value": "PC"}
+    - i have a [Mac](system)
+    - i have a [PC](system)
+    - im using a [mac]{"entity": "system", "value": "Mac"}
+    - im using a [pc]{"entity": "system", "value": "PC"}
+    - i'm using a [mac]{"entity": "system", "value": "Mac"}
+    - i'm using a [pc]{"entity": "system", "value": "PC"}
+    - i'm using an [apple]{"entity": "system", "value": "Mac"} computer
+    - i have an [apple]{"entity": "system", "value": "Mac"} computer
+    - [Wifi]{"entity": "setting_name", "value": "wifi"}
+    - [Buletooth]{"entity": "setting_name", "value": "buletooth"}
+    - [buletooth](setting_name)
+    - [WIFI]{"entity": "setting_name", "value": "wifi"}
+    - [bluetooth](setting_name)
+    - [windows]{"entity": "system", "value": "Windows 10"}
+    - [pc]{"entity": "system", "value": "PC"}
+    - [Bluetooth](setting_name)
+- synonym: buletooth
+  examples: |
+    - Buletooth
+- synonym: Windows 10
+  examples: |
+    - windows
+    - windows 10
+- synonym: Windows 11
+  examples: |
+    - winodws 11
