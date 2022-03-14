@@ -74,7 +74,7 @@ responses:
   - text: Which Program would you like to open?
   utter_ask_setting_name:
   - text: Which Setting are you trying to change?
-  utter_ask_term:
+  utter_ask_file_obj:
   - text: Are you trying to {desired_action} a file, folder, or multiple files and/or folders?
   - text: Would you like to copy/make new/delete a file, folder, or multiple files and/or folders?
   utter_ask_desired_action:
