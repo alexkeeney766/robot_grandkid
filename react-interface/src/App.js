@@ -2,9 +2,6 @@ import { React, useState } from 'react';
 import Widget from 'rasa-webchat';
 import './App.css';
 
-
-
-
 function App() {
   const [cleared, setCleared] = useState(false);
 
