@@ -5,6 +5,7 @@ engine/models/*
 engine/story_graph.dot
 engine/secrets.txt
 engine/rei.sh
+engine/credentials.yml
 
 **/venv
 
