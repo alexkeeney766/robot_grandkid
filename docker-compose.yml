@@ -1,30 +1,42 @@
 version: '3.0'
 services:
+
+  rasa_actions:
+    image: alexkeeney766/robot_grandkid_actions:2.8.3
+    ports:
+      - 5055:5055
+    # expose: 
+    #   - 5055
+    # volumes:
+    #   - "./engine/actions/:/app/actions"
+    # networks:
+    #   - rgk
+    # command:
+    #   - python -m run actions 
+    #   - run
+    #   - actions
+
   rasa:
-    image: robot_grandkid-agent
+    image: rasa/rasa:2.8.21-full
     ports:
       - 5005:5005
     volumes:
-      - ./:/app
-    command: 
-      - run
-
-  rasa-actions:
-    image: robot_grandkid-actions
-    ports:
-      - 5055:5055
-    volumes:
-      - ./:/app
+      - ./engine/:/app
+    # networks:
+    #   - rgk
     command:
       - run
-
-  app:
-    image: robot_grandkid-interface
-    ports:
-      - 3000:3000
-    volumes:
-      - ./:/app
-    command: 
-      - run
+      - --enable-api
+      - --cors
+      - "*"
+    
+  # app:
+  #   image: robot_grandkid-interface
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - ./:/app
+  #   command: 
+  #     - run
 
   
